@@ -1,0 +1,3173 @@
+.container{
+	width: 100%;
+	height: 800px;
+	border: red;
+}
+
+.texto-modal{
+	color: red;
+	text-align: center;
+	font-size: 15px;
+}
+
+
+.encabezado {
+	width: 100%;
+	padding-bottom: 5px;
+	position: relative;
+	left: 30px;
+}
+.encabezado img{
+	width: 93%;
+
+}
+
+.menu{
+	height: 80px;
+
+	/*background-image: url('/fondoMenu.png');*/
+	background-position: center;
+	position: relative;
+	left: 31px;
+	background-color: rgb(26,50,86);
+	width: 100%;	
+	top: 30px;
+	
+} 
+
+.menuitem{
+	list-style: none;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 10px;
+	width: 137px;
+	float: left;
+	
+}
+.menuitem a{
+	color: white;
+	font-size: 13px;
+	padding:0px;
+	position: relative;
+
+}
+.menuitem a:hover{
+	color: white;
+	text-decoration: underline;
+
+}
+.submenuPrin
+{
+	overflow:hidden;
+	position:relative;
+	top: 9px;
+	height: 40px;
+	width: 200px;
+	/*background-image: url('/fondoMenu.png');*/
+	background-color: rgb(36,50,86);
+	visibility:hidden;
+	z-index: 1;
+}
+.submenuPrin li{
+	list-style: none;
+	/*padding-left:15px;*/
+	padding-right:15px;
+	padding-top:7px;
+	padding-bottom:7px;
+	background-color: rgb(36,50,86);
+}
+.submenuPrin li a{
+	display:block;
+	color:white;
+	font-family:Tahoma;
+	font-size:12px;
+	text-align:left;
+	text-decoration:none;
+	background-color: rgb(36,50,86);
+
+}
+
+.menuitem:hover .submenuPrin{
+	visibility: visible;
+	background-color: rgb(36,50,86);
+}
+
+.submenu
+{
+	overflow:hidden;
+	position:relative;
+	top: 9px;
+	height: 110px;
+	width: 230px;
+	/*background-image: url('/fondoMenu.png');*/
+	background-color: rgb(36,50,86);
+	visibility:hidden;
+	z-index: 1;
+}
+.submenu li{
+	list-style: none;
+	/*padding-left:15px;*/
+	padding-right:15px;
+	padding-top:7px;
+	padding-bottom:7px;
+	background-color: rgb(36,50,86);
+}
+.submenu li a{
+	display:block;
+	color:white;
+	font-family:Tahoma;
+	font-size:12px;
+	text-align:left;
+	text-decoration:none;
+	background-color: rgb(36,50,86);
+
+}
+.menuitem:hover .submenu{
+	visibility: visible;
+	background-color: rgb(36,50,86);
+}
+
+
+#carouselIngenieria{
+	padding-top: 20px;
+	width: 850px;
+	left: 28%;
+	position: relative;
+	
+	bottom: 75px;
+	
+}
+
+.carousel-item .active
+{
+	height:200px;
+	width: 350px;
+
+}
+
+.secre
+{
+	width: 77%; 
+	background-color: rgb(26,50,86);
+	position: relative;
+	bottom: 256px;
+	text-align: center;
+	color: white;
+	left: 148px;
+}
+
+.secretaria p
+{
+	background-color: rgb(26,50,86);
+}
+.piePagina p{
+	text-align: center;
+	font-size: 12px;
+	position: relative;
+	top: -270px;
+}
+.imagen{
+	position: relative;
+	top: 90px;
+	left: 200px;
+}
+.datos{
+	position: relative;
+	left: 600px;
+	bottom: 160px;
+}
+.datos p{
+	font-size: 13px;
+	position: relative;
+	right: 30px;
+	top: 25px;
+}
+.texto{
+	text-align: center;
+	position: relative;
+	bottom: 25px;
+}
+.pagina{
+	text-align: center;
+	position: relative;
+	bottom: 15px;	
+	color: rgb(0,153,102);
+}
+
+/*MenuAlumno*/
+/*div datosGenerales*/
+.submenuRegistro
+{
+	overflow:hidden;
+	position:relative;
+	top: 3px;
+	right:10px;
+	height: 28px;
+	/*width: 173px;
+	/*background-color:rgb(53,73,146); /*color azul marino*/
+	visibility:hidden;
+	z-index: 1;
+	padding: 25px;
+	 background-color: rgb(36,50,86); 
+	 width: 220px;
+}
+.submenuRegistro li{
+	list-style: none;
+	padding-left:5px;
+	padding-right:5px;
+	padding-top:7px;
+	padding-bottom:5px;
+}
+.submenuRegistro li a{
+	display:block;
+	color:white;
+	font-family:Tahoma;
+	font-size:12px;
+	text-align:left;
+	text-decoration:none;
+}
+
+.submenuRegistro ul{
+	padding: 30px;
+	background-color: rgb(36,50,86);
+}
+.menuitem:hover .submenuRegistro{
+	visibility: visible;
+}
+
+/*menu alumno*/
+.menu
+{
+	width: 93%;
+	height: 40px;
+}
+
+.a{
+	width: 50px;
+	height: 50px;
+}
+
+.menu ul{
+	background-color: rgb(26,50,86);
+}
+
+.contenedorDatos{
+	height:170px;
+	background-color: (198,217,241);
+	padding: 0px;
+}
+
+.contenedorDatos img{
+
+	position: relative;
+	 left:50px; 
+	 width: 15%;
+	 top: 20px;
+}
+.contenedorDatosAut{
+	height:870px;
+	background-color: (198,217,241);
+	padding: 0px;
+	bottom: 140px;
+	position: relative;
+	width: 125%;
+	right: 90px;
+}
+
+.contenedorDatosAut img{
+
+	position: relative;
+	 right:290px; 
+	 width: 14%;
+	 top:27px;
+	 padding-right:  15px;
+	 padding-bottom: 5px;
+
+}
+
+.DatosGenerales{
+	height: 200px; 
+	position: relative; 
+	left: 273px; 
+	bottom:150px;
+	width: 66%;
+	padding: 30px;
+}
+
+.fila1{
+	 height: 29px;
+	 background-color: rgb(198,217,241);
+	  font-family: Tahoma;
+	  font-size: 15px;
+	 left:50px;
+}
+
+.columna1{
+	
+	font-family: Tahoma;
+	font-size: 15px;
+	color: white;
+	text-align: left;
+	height: 29px;
+	background-color: rgb(26,50,86);
+}
+.row
+{
+	background-color: rgb(198,217,241);
+	margin: 0;
+}
+
+/* .col-5{
+	font-family: Tahoma;
+	font-size: 16px;
+
+} */
+
+.fila2{
+	background-color: rgb(26,50,86); 
+	font-family: Tahoma;
+	font-size: 15px;
+	color: white;
+	height: 30px;
+}
+
+.columna2{
+	background-color: (198,217,241); 
+	font-family: Tahoma;
+	font-size: 15px; 
+	color: white;
+}
+
+.liAyuda{
+	padding-left: 0px;
+	 left: -50px; 
+	 position: relative;
+}
+
+.liCerrar{
+	width: 40px;
+	position: relative;
+}
+
+.aCerrarSesion{
+	padding-left: 0px;
+	left: 610px; 
+	position: relative;
+
+}
+.aAyuda{
+	padding-left: 0px;
+	left: 670px; 
+	position: relative;
+}
+
+.colFecha{
+	background-color: rgb(26,50,86); 
+	font-family: Tahoma;
+	font-size: 15px; 
+	color: white;
+}
+
+/*solicitud alumno*/
+
+.titulo{
+	width: 93%;
+	position: relative; 
+	left: 122px;
+	color: white;
+	text-align: center;
+	font-size: 20px;
+	height:28px;/*altura*/
+	width: 93%; 
+	position: relative; 
+}
+
+ .tituloDatosAlumno 
+{
+	color: white;
+	text-align: center;
+	font-size: 18px;
+	height:28px;/*altura*/
+	width: 78%;
+	align-self: center;
+	width: 78%;
+	position: relative;
+	left: 120px;
+	background-color:rgb(26,50,86) ;
+	margin: 2px;
+}
+.tituloDatosAlumnoEvaluacion
+{
+	color: white;
+	text-align: left;
+	font-size: 18px;
+	height:28px;/*altura*/
+	width: 92.9%;
+	align-self: center;
+	position: relative;
+	left: 30px;
+	top: 50px;
+	background-color:rgb(26,50,86) ;
+	margin: 2px;
+}
+.formEvaluacion{ 
+	width: 90%; 
+	position: relative; 
+	right: -5px;
+}
+.tituloAutorizaciones
+{
+	color: white;
+	text-align: center;
+	font-size: 18px;
+	height:28px;/*altura*/
+	width: 93%;
+	left:28px; 
+/*	align-self: center;*/
+	position: relative;
+	top:50px;
+	background-color:rgb(26,50,86) ;
+	margin: 3px;
+}
+.tituloDatosTutorAcademico
+{
+	height:38px;/*altura*/
+	width: 93%;
+	right:-30px; 
+	color: white;
+	position: relative;
+	text-align: center;
+	font-size: 17px;
+	top:50px;
+	background-color:rgb(26,50,86);
+}
+
+.tituloDatosTutorAcademico p
+{
+	
+	right: 10%;
+	position: relative;
+}
+ .textoAutorizaciones{
+ 	
+ 	position: relative;
+	right: 9%;
+    color: white;
+ }
+
+ .textoTutorAcademico
+ {
+	font-size: 18px;
+ 	left: 300px;
+ 	text-align: center;
+ }
+
+.datosAutorizaciones
+{
+	height: 550px; 
+	width: 93%;
+	left: 30px;
+	position: relative;
+	top: 56px;
+	background-color: rgb(198,217,241);
+	
+}
+.fechaAutorizacionTutor
+{
+	width: 93%; 
+	position: relative;
+	left: 85px;
+ 
+	margin-bottom:20px;
+}
+.tituloFechaAutorizacionTutor
+{
+	background-color: rgb(26,50,86);
+}
+.labeltutor{
+
+	position: relative;
+	left:30px;
+	top:30px;
+}
+.divComentariosTutor
+{
+	width: 93%; 
+	position: relative;
+	left: 87px;
+}
+.textoComentariosTutor
+{
+	height: 54px; 
+	width: 10%;
+	left: 20px; 
+	position: relative;
+	padding-bottom:30px;
+	background-color: rgb(26,50,86);	
+}
+.labelcomentarios{
+
+	position: relative;
+	top:50px;
+	left:45px;
+}
+.tituloEncargado
+{
+	width: 100%; 
+	height: 38px;
+	position: relative;
+	right: 90px;
+	top: 10px;
+	color: white;
+	text-align: center;
+	font-size: 18px;
+	background-color:rgb(26,50,86);	
+}
+
+.tituloEncargado1
+{
+	width: 100%; 
+	height: 38px;
+	position: relative;
+	left: 0px;
+	top: 40px;
+	color: white;
+	text-align: center;
+	font-size: 18px;
+	background-color:rgb(26,50,86);	
+}
+
+
+.autorizacionEncargado 
+{
+	width: 93%;
+	position:relative;
+
+	height: 900px;
+}
+.datosFechaAutorizacionEncargado
+{
+	width: 93%; 
+	position: relative;
+	left: 92px;
+	top: 100px;
+
+}
+.textoFechaEncargado
+{
+  	background-color: rgb(26,50,86);
+}
+.ComentariosEncargado
+{
+ 	width: 93%; 
+	position: relative;
+	left: 96px;
+	top: 120px;
+ 	margin-bottom: 20px;	
+}
+.textoComentariosEncargado
+{
+ 	height: 44px; 
+ 	left: 20px; 
+ 	text-align: left;
+ 	position: relative;
+ 	background-color: rgb(26,50,86);	
+}
+
+
+ .formGuardaDatos{
+ 	width: 78%;
+ 	position: relative;
+ 	left: 122px;
+ }
+
+ .Alumno{
+ 	height: 340px;
+
+ }
+
+  .AlumnoAut{
+ 	height: 340px;
+ 	width: 120%;
+ }
+
+ .rowReportes1{
+
+ 	width: 88%;
+ 	
+ 	height: 50px;
+ 	left:90px;
+ 	position: relative;
+ 	bottom: 90px;
+ 	
+ }
+ .rowReportesPeriodo
+ {
+
+ 	width: 88%;
+ 	
+ 	height: 50px;
+ 	left:90px;
+ 	position: relative;
+ 	bottom: 60px;
+ }
+ .rowSolicitud1{
+ 	width: 78%;
+ 	margin-left:30px; 
+ 	height: 50px;
+ 	position: relative;
+ 	bottom:-10px;
+ 	right:148px;
+ }
+
+
+ .colum1
+{
+	color: white;
+	font-size: 15px;
+	left:20px;
+	top:15px;
+	width: 8%;
+	margin-bottom: 20px;
+	text-align: left;
+	background-color:rgb(26,50,86); 
+	height: 43px;
+	text-align: left;	
+}
+
+.col10{
+	top:15px;
+	left:20px;
+}
+/****labels de las vistas CON DATOS para la solicitud***/
+.labelP{
+	top:5px;
+	left:18px;
+	position: relative;
+	left:60px;
+}
+
+.horainput3
+{
+	/*left:30px;*/
+	top:20px;
+	background-color: rgb(198,217,241);
+	left:20px;
+	position: relative;
+}
+
+.horainput4{
+	left:3px;
+	top:20px;
+	background-color: rgb(198,217,241);
+	position: relative;
+}
+.fechainput3
+{
+	left:35px; 
+	padding:0px;
+	top:15px;
+	background-color: rgb(198,217,241);
+	position: relative;
+
+}
+.fechainput4
+{
+	
+	top:10px;
+	background-color: rgb(198,217,241);
+    left:15px;
+    padding:2px;
+}
+.fecha3
+{
+	font-size: 15px;
+	color: black ;
+	font-family: tahoma;
+	height:30px;/*altura*/
+	top:18px;
+	/*left:29px;*/
+
+	left:20px;
+	 padding:0px; 
+	 text-align: left;
+}
+
+.actividades3
+{
+	top:65px;
+	left:20px;
+}
+
+.inputNombreEm3
+{
+
+	background-color: rgb(198,217,241);
+	top: 10px;
+	margin-right: 20px;
+	left:225px;
+	position: relative;
+}
+
+.seleccionarEmpresa3
+{
+	top:57px;
+	background-color: rgb(198,217,241);
+	padding: 0px; 
+	left:40px;
+	position: relative;
+}
+
+.inputTel3
+{
+	left:34px;
+	background-color: rgb(198,217,241);
+	padding: 0px;
+	top:70px;
+	left:5%;
+
+}
+.inputTel4
+{
+	left:34px;
+	background-color: rgb(198,217,241);
+	padding: 0px;
+	top:85px;
+	left:5%;
+
+}
+
+/****FIN de las vistas CON DATOS para la solicitud***/
+.formcontrol{
+	background-color:rgb(26,50,86);
+	color:white;
+}
+.rowsol{
+	width: 78%;
+	 margin-left:30px;
+	 margin-bottom:20px;
+	 height: 30px;
+	 text-align: left;
+	 position: relative;
+	 bottom:-20px;
+	/* padding: 0px;*/
+
+}
+.rowsolbotones{
+	width: 100%;
+	 /*margin-left:30px;
+	/*margin-bottom:20px*/;
+	 height: 30px;
+	/* text-align: left;*/
+	 position: relative;
+	 top:110px;
+	/* padding: 0px;*/
+
+}
+
+.colbotones1{
+
+position: relative;
+left:250px;
+
+}
+.colbotones2{
+
+position: relative;
+left:210px;
+
+}
+.colbotones3{
+
+position: relative;
+left:500px;
+bottom: 94px;
+
+}
+.rowbotonesrep{
+	width: 78%;
+	 margin-left:30px;
+	 margin-bottom:20px;
+	 height: 30px;
+	 text-align: left;
+	 position: relative;
+	 left:92px;
+	 top:190px;
+	/* padding: 0px;*/
+
+}
+
+.colbotonesrep1{
+	position: relative;
+	left: 310px;
+}
+.colbotonesrep2{
+	position: relative;
+	left: 294px;
+
+}
+.colbotonesrep3{
+	position: relative;
+	left: 270px;
+
+}
+.rowrep{
+	width: 88%;
+	 margin-left:10px;
+	 margin-bottom:10px;
+	 height: 30px;
+	 text-align: left;
+	 position: relative;
+	 bottom:50px
+	 left: 100px;
+	/* padding: 0px;*/
+
+}
+
+.rowarchivo{
+	width: 78%;
+	 margin-left:10px;
+	 margin-bottom:10px;
+	 height: 30px;
+	 text-align: left;
+	 position: relative;
+	 bottom:95px
+	 left: 50px;
+	/* padding: 0px;*/
+
+}
+
+.rowarchivo2{
+	width: 78%;
+	 margin-left:10px;
+	 margin-bottom:10px;
+	 height: 30px;
+	 text-align: left;
+	 position: relative;
+	 bottom:-92px;
+	 left: 92px;
+	/* padding: 0px;*/
+
+}
+
+.colum11
+{
+	color: white;
+	text-align: center;
+	font-size: 15px;
+	background-color:rgb(53,73,146); /*color azul marino*/
+	/*height:50px;/*altura*/
+	top:35px;
+
+
+}
+
+.columnrep{
+	height: 76px; 
+	position: relative;
+	left:20px;
+	 text-align: left; 
+	 background-color:rgb(26,50,86);
+	 top: 32px;
+	 color: white;
+}
+
+.columnarchiv{
+	height: 76px; 
+	position: relative;
+	left:20px;
+	 text-align: left; 
+	 background-color:rgb(26,50,86);
+	 top: 32px;
+	 color: white;
+}
+.column111{
+	height: 30px; 
+	position: relative;
+	left:20px;
+	 text-align: left; 
+	 background-color:rgb(26,50,86);
+}
+
+.col-5 
+{
+	
+	background-color: rgb(198,217,241);
+}
+
+.actividades
+{
+	top:18px;
+	left:20px;
+}
+.descargar
+{
+	top:35px;
+	left:20px;
+	 
+}
+
+.descargar a:hover
+{	
+	text-decoration: underline;
+	color:white;
+	background-color:rgb(26,50,86);
+}
+.actividades1
+{
+	top:38px;
+	left:33px;
+}
+
+.actividades2
+{
+	top:30px;
+	left:40px;
+}
+
+.hora{
+	left:44px;
+	 top:20px;
+	  padding:0px; 
+	  text-align: left;
+		font-size: 15px;
+	color: black ;
+	font-family: tahoma;
+	height:32px;/*altura*/
+
+
+}
+
+.hora2{
+	left:20px;
+	 top:20px;
+	  padding:0px;
+	   text-align: left;
+	font-size: 15px;
+	color: black ;
+	font-family: tahoma;
+	height:32px;/*altura*/
+}
+
+
+.horainput
+{
+	/*left:30px;*/
+	top:6px;
+	background-color: rgb(198,217,241);
+	left:20px;
+}
+
+.horainput1{
+	left:3px;
+	top:6px;
+	background-color: rgb(198,217,241);
+}
+.fecha1
+{
+	font-size: 15px;
+	color: black ;
+	font-family: tahoma;
+	height:30px;/*altura*/
+	top:18px;
+	left:45px;
+	 padding:0px; 
+	 text-align: left;
+/*	left:85px;*/
+}
+.fecha2
+{
+	font-size: 15px;
+	color: black ;
+	font-family: tahoma;
+	height:30px;/*altura*/
+	top:18px;
+	/*left:29px;*/
+
+	left:45px;
+	 padding:0px; 
+	 text-align: left;
+}
+.fecha22
+{
+	font-size: 15px;
+	color: black ;
+	font-family: tahoma;
+	height:30px;/*altura*/
+	top:18px;
+	/*left:29px;*/
+
+	right:35px;
+	 padding:0px; 
+	 text-align: left;
+}
+.fechainput1
+{
+	left:35px; 
+	padding:0px;
+	top:10px;
+	background-color: rgb(198,217,241);
+
+}
+.fechainput2
+{
+	
+	top:10px;
+	background-color: rgb(198,217,241);
+   left:10px;
+    padding:2px;
+}
+
+.fechainputarch
+{
+	top:60px;
+	background-color: rgb(198,217,241);
+   left:20px;
+    padding:2px;
+}
+
+.in
+{
+	top:64px;
+	position: relative;
+   	left:40px;
+    padding:2px;
+    background-color: rgb(26,50,86);
+    color:white;
+}
+
+.inputarch
+{	
+	
+	position: relative;
+}
+
+.inputarch1
+{	
+	top:65px;
+	height: 30px;
+	/*background-color: rgb(198,217,241);*/
+   	left:240px;
+    padding:2px;
+    background-color: rgb(26,50,86);
+    color:white;
+}
+
+.inputarch2
+{	
+	top:55px;
+	background-color: rgb(198,217,241);
+   	left:205px;
+    padding:2px;
+    position: relative;
+}
+
+
+.fechainput1aut
+{
+	left:55px; 
+	padding:2px;
+	top:10px;
+	background-color: rgb(198,217,241);
+
+}
+
+.fechainput1autrep
+{
+	right:15px; 
+	padding:2px;
+	top:10px;
+	background-color: rgb(198,217,241);
+
+}
+.fechainput2aut
+{
+	
+	top:11px;
+	background-color: rgb(198,217,241);
+   	right:130px;
+    padding-left:20px;
+    
+}
+
+.actividades{
+	top:30px;
+}
+
+.botonEnviar{
+	margin-left: 350px;
+	 margin-top: 115px;
+}
+
+/*Datos que se guardan de la empresa en el llenado de la solicitud*/
+
+.formGuardaEmpresa{
+	width: 100%;
+	position: relative;
+	left: 0px;
+}
+
+ .tituloDatosEmpresa 
+{
+	color: white;
+	text-align: center;
+	font-size: 18px;
+	/*background-color:rgb(59,64,104);*/
+	height:28px;/*altura*/
+	width: 93%;/*ancho*/
+	align-self: center;
+	background-color:rgb(26,50,86);
+	position: relative;
+	top:37px;
+	left: 31px;
+}
+.tituloDatosEmpresa p
+{
+	position: relative;
+	right: 10%;
+
+}
+ .tituloDatosEmpresaAut
+{
+	color: white;
+	text-align: center;
+	font-size: 18px;
+	/*background-color:rgb(59,64,104);*/
+	height:28px;/*altura*/
+	width: 100%;/*ancho*/
+	align-self: center;
+	background-color:rgb(26,50,86);
+	position: relative;
+	bottom:723px;
+	left: 4px;
+
+}
+.tituloDatosEmpresaAut p
+{
+	position: relative;
+	left: 25px;
+
+}
+.Empresa
+{
+	width: 93%;/*ancho*/ 
+	/*height:500px;/*altura*/
+	border-color: rgb(53,75,146);
+	background-color: rgb(198,217,241);
+
+	position: relative;
+	left: 31px;
+	top:41px;
+	height: 640px;
+}
+
+.EmpresaAut
+{
+	width: 93%;/*ancho*/ 
+	/*height:500px;/*altura*/
+	border-color: rgb(53,75,146);
+	background-color: rgb(198,217,241);
+
+	position: relative;
+	left: 31px;
+	top:-73px;
+	height: 0px;
+}
+
+.parrafoAltaEmpresa
+{
+	height:30px;/*altura*/
+	width: 97%;/*ancho*/
+	background-color: rgb(198,217,241);
+	color:red;
+	font-family:arial narrow;
+	font-size: 15px;
+	 padding: 10px; 
+	
+	 
+	  position: relative;
+	  right: 231px;
+	
+
+}
+
+.rowNombreEmpresa{
+	width: 78%; 
+	margin-left:30px; 
+	top: 12px;
+	right:190px;
+	margin-bottom: 10px;
+	position: relative;
+}
+
+.inputNombreEm
+{
+
+	background-color: rgb(198,217,241);
+	top: 5px;
+	margin-right: 20px;
+	left:225px;
+}
+.inputNombreEm2
+{
+
+	background-color: rgb(198,217,241);
+	top: 65px;
+	margin-right: 10px;
+	left:30px;
+	
+}
+
+.inputNombreEm1
+{
+
+	background-color: rgb(198,217,241);
+	top: 47px; 
+	padding: 0px; 
+	left:40px;
+}
+
+
+.colum111
+{
+	color: white;
+	text-align: center;
+	font-size: 15px;
+	left:20px;
+	top:40px;
+	height: 30px; 
+	text-align: left; 
+	background-color:rgb(26,50,86);
+
+}
+.colum1111
+{
+	color: white;
+	text-align: center;
+	font-size: 15px;
+	left:20px;
+	top:35px;
+	height: 45px; 
+	text-align: left; 
+	background-color:rgb(26,50,86);
+
+}
+
+.colbotonesasesor1{
+	position: relative;
+	left:225px;
+
+
+}
+
+.colbotonesasesor2{
+	position: relative;
+	left:190px;
+
+
+}
+.colbotonesasesor3{
+	position: relative;
+	left:205px;
+
+
+
+}
+
+.catalogoDirEmp{
+	width: 78%; 
+	margin-left:30px;
+	margin-bottom: 5px;
+	position: relative;
+	top: 50px;
+	height: 20px;
+	right:0px;
+}
+.colum2
+{
+	color: white;
+	font-size: 15px;
+	height:30px;/*altura*/
+	left:20px;
+	top:55px;
+	text-align: left; 
+	background-color:rgb(26,50,86);
+
+}
+
+.columRamo
+{
+	color: white;
+	font-size: 15px;
+	height:30px;/*altura*/
+	left:20px;
+	top:65px;
+	text-align: left;
+	background-color:rgb(26,50,86);
+
+}
+.columRamo2
+{
+	color: white;
+	font-size: 15px;
+	height:60px;/*altura*/
+	left:20px;
+	top:65px;
+	text-align: left;
+	background-color:rgb(26,50,86);
+
+}
+.seleccionarEmpresa
+{
+	bottom:-50px;
+	background-color: rgb(198,217,241);
+	padding: 0px; 
+	left:40px;
+	position: relative;
+}
+
+.rowGiro{
+	width: 78%; 
+	margin-left:30px; 
+	margin-bottom: 5px;
+	position: relative;
+	top:113px;
+
+}
+
+.rowGiro1{
+	width: 78%;
+	margin-left:20px; 
+	margin-bottom: 5px;
+	position: relative;
+	top:123px;
+	left: 90px;
+}
+.inputRamo
+{
+	position: relative;
+	top:60px;
+	background-color: rgb(198,217,241); 
+	padding: 0px;
+ 	right:-140px;
+}
+
+.rowTelefono{
+	width: 78%;
+	 margin-left:30px;
+	  margin-bottom: 5px;
+	  position: relative;
+	  top: 170px;
+}
+
+.rowProponer{
+	 width: 78%;
+	height: 0px;
+		position: relative;
+	  top: 240px;
+	 
+}
+.rowProponerbotones{
+	 width: 92%;
+	 position: relative;
+	 top: 200px;
+	 
+}
+.colProponer1{
+	position: relative;
+	left:34px;
+
+}
+.colProponer2{
+	position: relative;
+	right:70px;
+	
+}
+
+.rowbotonesempresa{
+	 width: 92%;
+	/*height: 0px;*/
+	position: relative;
+	top: 300px;
+	left:80px;
+	 
+}
+
+.colbotemp1{
+	position: relative;
+	left: 180px;
+
+}
+.colbotemp2{
+	position: relative;
+	left: 110px;
+
+}
+.colbotemp3{
+	position: relative;
+	left: 60px;
+
+}
+.inputTel
+{
+	left:34px;
+	background-color: rgb(198,217,241);
+	padding: 0px;
+	top:74px;
+	left:5%;
+
+}
+.inputFechaAut
+{
+	left:34px;
+	background-color: rgb(198,217,241);
+	padding: 0px;
+	top:84px;
+	left:5%;
+
+}
+.inputFechaAutTut
+{
+	left:34px;
+	background-color: rgb(198,217,241);
+	padding: 0px;
+	top:84px;
+	left:5%;
+
+}
+
+.inputTel2
+{
+	left:34px;
+	background-color: rgb(198,217,241);
+	padding: 0px;
+	top:60px;
+	left:5%;
+
+}
+
+.menuitemAlumno{
+
+
+}
+
+
+
+.botonProponerEmpresa{
+	position: relative;
+	top: 80px;
+	left: 80px;
+}
+.columTel
+{
+	color: white;
+	font-size: 15px;
+	height:30px;/*altura*/
+	left:20px;
+	top:80px;
+	text-align: left;
+	background-color:rgb(26,50,86);
+}
+
+.rowbotonesproponer{
+	width: 78%;
+	position: relative;
+	
+}
+
+.subsubmenuGuardarDatos
+{
+	position:relative;
+	top: 3px;
+	right:10px;
+	height: 28px;
+	width: 173px;
+	color:black;
+	background-color:rgb(53,73,146); /*color azul marino*/
+	visibility:visible;
+	z-index: 2;	
+}
+
+
+.subsubmenuGuardarDatos li{
+	list-style: none;
+	padding-left:5px;
+	padding-right:5px;
+	padding-top:7px;
+	padding-bottom:5px;
+}
+/*.subsubmenuGuardarDatos li a{
+	display:block;
+	color:black;
+	font-family:Tahoma;
+	font-size:12px;
+	text-align:left;
+	text-decoration:none;
+}*/
+/*.subsubmenuGuardarDatos:hover .submenuRegistro{
+	visibility: visible;
+} */
+
+.tituloDatosSolAl{
+
+	position: relative; 
+	left: 31px;
+	color: white;
+	text-align: center;
+	font-size: 20px;
+	height:28px;/*altura*/
+	width: 93%; 
+	top: 35px;
+	background-color:rgb(26,50,86); /*color azul marino*/
+}
+
+.tituloDatosSolAl p{
+	position: relative;
+	right: 80px;
+}
+
+ .tituloDatosAlumnoSol
+{
+	color: white;
+	text-align: center;
+	font-size: 18px;
+	height:28px;/*altura*/
+	width: 93%;/*ancho*/
+	align-self: center;
+	
+	position: relative;
+	left: 31px;
+	background-color:rgb(26,50,86); /*color azul marino*/
+	top:38px;
+
+}
+ .tituloDatosAlumnoSol p{
+	position: relative;
+	right: 100px;
+}
+.formGuardaDatosAlSol{
+	top:30px;
+ 	width: 100%;
+ 	position: relative;
+ 	left: 122px;
+ }
+
+ .AlumnoSol
+{
+	width: 93%;/*ancho*/ 
+	height:420px;/*altura*/
+	background-color: rgb(198,217,241);
+	position: relative;
+	right:91px;
+	top:20px;
+}
+
+
+ .AlumnoRep
+{
+	width: 93%;/*ancho*/ 
+	height:570px;/*altura*/
+	background-color: rgb(198,217,241);
+	position: relative;
+	right:91px;
+	top:20px;
+}
+
+
+.botonGuardar{
+	position: relative;
+	bottom: 200px;
+	left: 500px;
+
+}
+
+.botonEditar{
+	position: relative;
+	bottom:200px;
+	right: -200px;
+	
+}
+
+/*estilos para solicitud datos empresa*/
+
+
+
+/*estilos para guardar datos asesor empresa*/
+
+.datosAsesorExt{
+	width: 93%; 
+	position: relative; 
+	left: 32px;
+}
+
+.rowNomAsesor{
+	width: 78%; 
+	margin-left:30px;
+	margin-bottom: 0px;
+	position: relative;
+	right:73px;
+	top:10px;
+}
+.tituloDatosAsesor 
+{
+	color: white;
+	font-size: 18px;
+	background-color:rgb(26,50,86);
+	height:35px;/*altura*/
+	width: 93%;/*ancho*/
+	top:38px;
+	position: relative;
+	left: 32px;
+	
+}
+
+.tituloDatosAsesor p
+{
+	color: white;
+	font-size: 18px;
+	left:150px;
+	position: relative;
+		
+}
+.tituloDatosAsesorAut
+{
+	color: white;
+	font-size: 18px;
+	background-color:rgb(26,50,86);
+	height:35px;/*altura*/
+	width: 93%;/*ancho*/
+	bottom:198px;
+	position: relative;
+	left: 35px;
+	
+}
+
+.tituloDatosAsesorAut p
+{
+	color: white;
+	font-size: 18px;
+	left:350px;
+	position: relative;
+		
+}
+
+.Asesor
+{
+	width: 93%;/*ancho*/ 
+	border-color: rgb(53,75,146);
+	background-color: rgb(198,217,241);
+	height: 600px;
+	position: relative;
+	top:50px;
+	left: 32px;
+}
+.AsesorAut
+{
+	width: 93%;/*ancho*/ 
+	border-color: rgb(53,75,146);
+	background-color: rgb(198,217,241);
+	height: 450px;
+	position: relative;
+	bottom:198px;
+	left: 35px;
+}
+.AsesorAut2
+{
+	width: 93%;/*ancho*/ 
+	border-color: rgb(53,75,146);
+	background-color: rgb(198,217,241);
+	height: 450px;
+	position: relative;
+	bottom:198px;
+	left: 35px;
+}
+.columNomAs
+{
+	color: white;
+	font-size: 15px;
+	height:30px;/*altura*/
+	left:20px;
+	top:35px;
+	text-align: left;
+	 background-color:rgb(26,50,86);
+}
+
+.inputRamo
+{
+	left:15px;
+	top:60px;
+	background-color: rgb(198,217,241);
+}
+
+.columNomAs
+{
+	color: white;
+	text-align: center;
+	font-size: 15px;
+	background-color:rgb(53,73,146); /*color azul marino*/
+	height:30px;/*altura*/
+	left:20px;
+	top:35px;
+
+}
+
+
+.inputNomAs
+{
+
+	top:30px;
+	background-color: rgb(198,217,241);
+	padding: 0px;
+	left: 40px;
+}
+
+.columCargoAs
+{
+	color: white;
+	font-size: 15px;
+	height:30px;/*altura*/
+	left:20px;
+	top:40px;
+	text-align: left; 
+	background-color:rgb(26,50,86);
+
+}
+
+.inputCargoAs
+{
+
+	top:40px;
+	background-color: rgb(198,217,241);
+	padding: 0px; 
+	left: 40px;
+}
+
+/*foto y datos geerales*/
+
+.foto img
+{
+	width: 30%;/*ancho*/
+	height: 300px;/*alto*/
+	position: relative;
+	border-color: red;
+	left:300px;
+}
+
+.rowCargoAsesor{
+	width: 78%; 
+	left:105px;
+	 margin-bottom: 10px;
+	 position: relative;
+	 bottom: -50px;
+}
+.rowCargoAsesor1{
+	width: 78%; 
+	right:73px;
+	 margin-bottom: 10px;
+	 position: relative;
+	 bottom: -50px;
+}
+
+.rowTelefonoAs{
+	width: 78%;
+	left:105px;
+	 margin-bottom: 10px;
+	  position: relative;
+	 bottom: -80px;
+}
+
+.rowTipoAsesor{
+	width: 78%; 
+	left:105px;
+	 margin-bottom: 10px;
+	  position: relative;
+	 bottom: -110px;
+}
+
+.rowEmailAs{
+	width: 78%;
+	 left:105px;
+	 
+	  position: relative;
+	 bottom: -150px;
+}
+
+.columCargoAs1
+{
+	color: white;
+	font-size: 15px;
+	height:30px;/*altura*/
+	left:20px;
+	top:45px;
+	text-align: left; 
+	background-color:rgb(26,50,86);
+	margin-top: 20px;
+
+}
+
+.inputCargoAs1
+{
+
+	top:40px;
+	background-color: rgb(198,217,241);
+	padding: 0px; 
+	left: 40px;
+	margin-top: 20px;
+}
+
+.botonEnviarDatAsesor{
+	margin-left: 350px; 
+	margin-top: 85px;
+	position: relative;
+	bottom:-150px;
+	left: 140px;
+
+}
+
+.botonEditarDatosAs{
+	position: relative;
+	bottom:-150px;
+	right: 520px;
+	margin-left: 350px;
+	 margin-top: 85px;
+	
+}
+
+.tipoAsselect
+{
+	position: relative;
+	left: 4px;
+
+}
+
+.gDatos{
+	position: relative;
+	left: 643px;
+}
+
+
+.editDatos{
+	position: relative;
+ 	
+ 	top:250px;
+	right: 245px;	
+
+}
+
+
+
+
+.bEditar{
+	 margin-left: 50px;
+	 margin-top: 115px;
+	 position: relative;
+	 top:-22px;
+	 left: 30px;
+
+}
+.bEditar1{
+	 margin-left: 50px;
+	 margin-top: 115px;
+	 position: relative;
+	 top:-22px;
+	 right: 250px;
+
+}
+
+.bCancelar1{
+	 margin-left: 50px;
+	 margin-top: 115px;
+	 position: relative;
+	 top:-22px;
+	 right: 350px;
+
+}
+
+.bGuardar1{
+	 margin-left:350px;
+	 margin-top:-15px;
+	 position: relative;
+	 top:150px;
+	 right: 128px;
+
+}
+
+.bGuardar{
+	 margin-left:50px;
+	 margin-top:-15px;
+	 position: relative;
+	 top:250px;
+	 left: 190px;
+
+}
+
+.bGuardarD{
+	
+	 position: relative;
+	 top:-50px;
+	 left: 90px;
+
+}
+
+.Botones{
+	position: absolute;
+
+}
+
+.rBotones{
+	position:relative;
+	top: 100px;
+	width: 92%;
+}
+
+
+/***-------------------------TUTOR ACADÉMICO---------------------****/
+
+.tutorDiv{
+	height:170px;
+	width: 114%;
+	 background-color: (198,217,241);
+	  padding: 0px;top: 142px;
+	   position: relative; 
+	   right: 105px;
+}
+
+.tutorDiv2{
+	height: 200px; 
+	position: relative;
+	 left: 240px;
+	  bottom:140px;
+	  width: 66%;
+	   padding: 0px;
+}
+
+.rowRPE{
+	height: 28.5px; 
+	background-color: rgb(198,217,241); 
+	font-family: Tahoma;
+	font-size: 12px;
+}
+
+.colRPE{
+	background-color: rgb(36,50,86);
+	 font-family: Tahoma;
+	 font-size: 15px;
+	  color: white;
+	 text-align: left;
+}
+
+.colFecha{
+	background-color: rgb(59,64,104); 
+	font-family: Tahoma;
+	font-size: 15px;
+	 color: white;
+}
+
+.colBienvenido{
+	background-color: rgb(36,50,86); 
+	font-family: Tahoma;
+	font-size: 15px;
+	 color: white;
+}
+
+.colNombreTutor{
+	background-color: (198,217,241);
+	 font-family: Tahoma;
+	 font-size: 15px;
+	  color: white;
+}
+
+.menuTutor{
+	height: 39px;
+	/*background-image: url('/fondoMenu.png');*/
+	background-position: center;
+	position: relative;
+	left: 31px;
+	background-color: rgb(26,50,86);
+	width: 93%;	
+	top: -118px;
+	
+} 
+
+.submenuRegistroTutor
+{
+	overflow:hidden;
+	position:relative;
+	top: 3px;
+	right:10px;
+	height: 28px;
+	visibility:hidden;
+	z-index: 1;
+	padding: 25px;
+	 background-color: rgb(36,50,86); 
+	 width: 320px;
+}
+.submenuRegistroTutor li{
+	list-style: none;
+	padding-left:5px;
+	padding-right:5px;
+	padding-top:7px;
+	padding-bottom:5px;
+}
+.submenuRegistroTutor li a{
+	display:block;
+	color:white;
+	font-family:Tahoma;
+	font-size:12px;
+	text-align:left;
+	text-decoration:none;
+}
+
+.submenuRegistroTutor ul{
+	padding: 10px;
+	background-color: rgb(36,50,86);
+}
+.menuitem:hover .submenuRegistroTutor{
+	visibility: visible;
+}
+
+.formSolP{
+	top: 200px;
+	position: relative;
+	  top: 20px;
+	   width: 78%;
+	    left: 122px;
+}
+
+.tableSolPend{
+	width:700px;
+	position: relative;
+	bottom:40px;
+	left: 80px;
+}
+.tableSolPend1{
+	width:700px;
+	position: relative;
+	bottom:90px;
+	left: 80px;
+}
+.trClaveUnica{
+	background-color:rgb(26,50,86);
+	 margin: 20px;
+	 position: relative;
+	 top:-130px;
+	 width: 620px;
+}
+.tdClaveUnica{
+	width: 120px;
+	 color: white;
+	height:30px;
+  border-right-color: white;
+}
+.tdNombre{
+	width: 220px;
+	 color: white;
+	height:30px;
+  border-right-color: white;
+}
+.tdSolicitud{
+	width: 180px; 
+	color: white;
+	 height:30px; 
+	border-right-color: white;
+}
+
+.tituloDatosTutor
+{
+	color: white;
+	font-size: 18px;
+	background-color:rgb(26,50,86);
+	height:35px;/*altura*/
+	width: 93%;/*ancho*/
+	top:-105px;
+	position: relative;
+	left: 32px;
+	
+}
+
+.tituloDatosTutor p{
+	position: relative;
+	left: -300px;
+}
+
+.tituloDatosTutor2
+{
+	color: white;
+	font-size: 18px;
+	background-color:rgb(26,50,86);
+	height:35px;/*altura*/
+	width: 93%;/*ancho*/
+	top:-98px;
+	position: relative;
+	left: 32px;
+	
+}
+
+.tituloDatosTutor2 p{
+	position: relative;
+	left: -220px;
+}
+.Tutor
+{
+	width: 93%;/*ancho*/ 
+	border-color: rgb(53,75,146);
+	background-color: rgb(198,217,241);
+	height: 600px;
+	position: relative;
+	top:-90px;
+	left: 32px;
+}
+
+
+/*-------encargado----------**/
+
+.menuAutorizaEncargado{
+	width: 78%; 
+	height: 39px; 
+	background-position: center;
+	 position: relative;
+    left: 122px;
+    background-color: rgb(26,50,86);top:-50px;
+}
+
+.divAlumno1{
+position: relative;
+height: 400px; 
+background-color: white; 
+left: 120px; 
+border-color: blue;
+}
+
+.rowTipoP{
+	width: 78%;
+	 margin-left:30px; 
+	  height: 50px;
+}
+
+.rowHorario{
+	width: 93%;
+	top: 125px;
+	height: 30px;
+	position: relative;
+	padding-left: 3px;
+	left:70px;
+}
+
+
+.rowPeriodo{
+  width: 90%;
+  text-align: left;
+  height: 40px;
+  left:74px;
+  top:188px;
+  padding-right: 192px;
+  position: relative;
+}
+
+.rowPeriodo1{
+  width: 90%;
+  text-align: left;
+  height: 40px;
+  right:20px;
+  bottom:10px;
+  left:102px;
+  padding-right: 70px;
+  position: relative;
+}
+
+.rowPeriodoreporte{
+  width: 89%;
+  text-align: left;
+  height: 40px;
+  left:107px;
+  top:160px;
+  padding-right: 62px;
+  position: relative;
+}
+
+
+.rowAct{
+	width: 78%; 
+
+	text-align: left; 
+	
+	position: relative;
+	top:70px;
+	right:20px;
+}
+
+.rowActs{
+	width: 78%; 
+	margin-left:30px;
+	text-align: left;
+	padding-right: 20px;
+	position: relative;
+	top: 220px;
+	left:75px;
+}
+.rowActs2{
+	width: 78%; 
+	margin-left:30px;
+	text-align: left;
+	padding-right: 20px;
+	position: relative;
+	top: 220px;
+	left: 35px;
+}
+
+.rowtelaut{
+	width: 78%; 
+	
+	text-align: left;
+	
+	position: relative;
+	top: 220px;
+	left:105px;
+}
+
+.rowActsrep{
+	width: 89%; 
+	margin-left:30px;
+	text-align: left;
+	padding-right: 60px;
+	position: relative;
+	top: 190px;
+	left:77px;
+}
+
+.rowVerArchivoRep{
+	width: 89%; 
+	margin-left:30px;
+	text-align: left;
+	padding-right: 60px;
+	position: relative;
+	top: 230px;
+	height: 20px;
+	left:77px;
+}
+
+.EmpresaAutEncargado{
+	height: 580px;
+	width: 100%;
+	bottom: 720px;
+	right: 20px;
+	margin-left: 25px;
+	position: relative;
+	background-color: rgb(198,217,241); 
+}
+
+.EmpresaAutEncargado1{
+	height: 580px;
+	width: 93.5%;
+	bottom: 804px;
+	right: -7px;
+	margin-left: 25px;
+	position: relative;
+	background-color: rgb(198,217,241); 
+}
+
+.contenedorComentario{
+	top: 750px;
+	 position: relative;
+	 background-color: rgb(26,50,86); 
+	 height: 39px;
+	 left: 155px; 
+	 width: 76.5%;
+}
+.contenedorComentario2{
+	top: 750px;
+	 position: relative;
+	 background-color: rgb(26,50,86); 
+	 height: 39px;
+	 left: 155px; 
+	 width: 76.5%;
+}
+.contenedorComentarioAutEmp{
+	top: 240px;
+	 position: relative;
+	 background-color: rgb(26,50,86); 
+	 height: 39px;
+	 left: 150px; 
+	 width: 77.2%;
+}
+
+.contenedorComentarioAutEmp p{
+	color: white;
+	text-align: center;
+	font-size: 22px;
+	 position:relative;
+	 height:28px;
+	 width: 78%;
+	  left: 80px;
+	   align-self: center;
+}
+
+.contenedorComentarioreporte{
+	 top: 410px;
+	 position: relative;
+	 background-color: rgb(26,50,86); 
+	 height: 39px;
+	 left: 321px; 
+	 width: 61.5%;
+}
+.contenedorComentarioreporte1{
+	 top: 450px;
+	 position: relative;
+	 background-color: rgb(26,50,86); 
+	 height: 39px;
+	 left: 152px; 
+	 width: 76.8%;
+}
+.titulodatosalumnorep{
+	
+	 position: relative;
+	 background-color: rgb(26,50,86); 
+	 height: 39px;
+	 left: 0px; 
+	 width: 100%;
+	 color: white;
+	 bottom:15px;
+	 text-align: center;
+	 font-size: 20px;
+}
+.titulodatosalumnorep1{
+	
+	 position: relative;
+	 background-color: rgb(26,50,86); 
+	 height: 39px;
+	 left: 0px; 
+	 width: 100%;
+	 color: white;
+	 bottom:35px;
+	 text-align: center;
+	 font-size: 20px;
+}
+.titulodatosalumnorep2{
+	
+	 position: relative;
+	 background-color: rgb(26,50,86); 
+	 height: 39px;
+	 left: 32px; 
+	 width: 93.5%;
+	 color: white;
+	 bottom:803px;
+	 text-align: center;
+	 font-size: 20px;
+}
+
+
+.contenedorComentario1{
+	top: 879px;
+	 position: relative;
+	 background-color: rgb(26,50,86); 
+	 height: 39px;
+	 left: 151px; 
+	 width: 77%;
+}
+
+
+.contenedorComentario p{
+	color: white;
+	text-align: center;
+	font-size: 22px; 
+	position:relative;
+	height:28px;
+	width: 78%; 
+	left: 80px; 
+	align-self: center;
+}
+
+.contenedorComentarioreporte p{
+	color: white;
+	text-align: center;
+	font-size: 22px; 
+	position:relative;
+	height:28px;
+	width: 78%; 
+	left: 80px; 
+	align-self: center;
+}
+.contenedorComentarioreporte1 p{
+	color: white;
+	text-align: center;
+	font-size: 22px; 
+	position:relative;
+	height:28px;
+	width: 78%; 
+	left: 80px; 
+	align-self: center;
+}
+
+.contenedorComentario2 p{
+	color: white;
+	text-align: center;
+	font-size: 22px;
+	 position:relative;
+	 height:28px;
+	 width: 78%;
+	  left: 80px;
+	   align-self: center;
+}
+
+.comentario3{
+width: 76.5%;
+ position: relative;
+  background-color: rgb(198,217,241);
+  top: 750px;
+   height: 740px; 
+   left: 153px;
+}
+.comentarioAutEmp{
+width: 77.2%;
+ position: relative;
+  background-color: rgb(198,217,241);
+  top: 243px;
+   height: 740px; 
+   left: 150px;
+}
+ 
+.comentario33{
+width: 76.5%;
+ position: relative;
+  background-color: rgb(198,217,241);
+  top: 750px;
+   height: 740px; 
+   left: 153px;
+}
+
+.comentario333{
+width: 61.5%;
+ position: relative;
+  background-color: rgb(198,217,241);
+  top: 413px;
+   height: 580px; 
+   left: 320px;
+}
+
+
+.comentario3333{
+width: 76.8%;
+ position: relative;
+  background-color: rgb(198,217,241);
+  top: 450px;
+   height: 580px; 
+   left: 152px;
+}
+
+
+.rowComentario3{
+	width: 78%; 
+	 left:160px;
+	
+	 top:15px;
+	 position: relative;
+}
+.rowComentario33{
+	width: 78%; 
+	 left:110px;
+	
+	 top:15px;
+	 position: relative;
+}
+.formGuarAcreditacion{
+	width: 78%;
+	 position: relative;
+	  left: 122px;
+}
+
+.parrafocomentarios{
+	color:blue;
+	text-align: center;
+	 font-size: 18px;
+	 height:28px;
+	top:120px;
+    right: 225px; 
+	align-self: center;
+	position: relative;
+}
+.parrafocomentariosreporte{
+	color:blue;
+	text-align: center;
+	 font-size: 18px;
+	 height:28px;
+	top:120px;
+    right: 275px; 
+	align-self: center;
+	position: relative;
+}
+
+.textareaComentarios{
+	height: 200px;
+	 width: 81%;
+	  position: relative;
+	   left: 90px; 
+	   top: 60px;
+}
+
+.btnEnviarComentarios{
+	margin-left: 350px;
+	 margin-top: 55px;
+}
+
+.formAutorizaTutor{
+	width: 78%; 
+	position: relative; 
+	left: 122px;
+}
+
+.rowClaveUASLP{
+	height: 28.5px;
+	 background-color: rgb(198,217,241);
+	  font-family: Tahoma;
+	  font-size: 12px;
+}
+
+.col3{
+background-color: rgb(26,50,86);
+ font-family: Tahoma;
+ font-size: 15px;
+  color: white; 
+  text-align: left;
+}
+
+.rowTipoPract{
+	width: 89%;
+	margin-left:30px;
+	margin-right:30px;
+	height: 50px;
+	position: relative;
+	top:80px;
+	left:44px;
+}
+
+.rowTipoPract1{
+	width: 89%;
+	margin-left:30px;
+	height: 50px;
+	position: relative;
+	bottom:30px;
+	left:75px;
+}
+.rowTipoPract2{
+	width: 89%;
+	margin-left:30px;
+	height: 50px;
+	position: relative;
+	bottom:30px;
+	left:95px;
+}
+.rowTipoPract2{
+	width: 89%; 
+	margin-left:30px;
+	height: 50px;
+	position: relative;
+	top:100px;
+	left:75px;
+}
+.colTipoP{
+	top:25px; 
+	left:20px;
+	color:black;
+}
+.labeltipoP
+{
+	position: relative;
+	
+}
+
+.rowEmpresaNom{
+	width: 78%; 
+	margin-left:30px; 
+	top: 60px;
+	 margin-bottom: 10px;
+}
+
+.rowEmpresaNomAut{
+	width: 89%; 
+	left:103px;
+	position: relative;
+	top: 50px;
+	height: 50px;
+} 
+
+.rowEmpresaNomAut2{
+	width: 89%; 
+	left:74px;
+	position: relative;
+	top: 50px;
+	height: 50px;
+} 
+
+.rowNombreAse{
+	width: 78%;
+	left:105px;
+	position: relative;
+	  margin-bottom: 0px;
+}
+
+.inputComentariosTutor{
+	height: 200px; 
+	width: 70%;
+	 position: relative; 
+	 left: 180px; 
+	 top: 130px;
+}
+.inputComentariosTutor2{
+	height: 200px; 
+	width: 70%;
+	 position: relative; 
+	 left: 130px; 
+	 top: 130px;
+}
+
+.btnEnviarAut{
+	position: relative;
+	top:145px;
+	left: 440px;
+}
+.btnEnviarAut1{
+	position: relative;
+	top:145px;
+	left: 600px;
+}
+
+.btnCancelarAut{
+	position: relative;
+	top:100px;
+	left:700px;
+}
+
+
+
+.imagen2{
+	background: blue;
+	width: 25%;
+	height: 100%;
+	float: left;
+}
+
+.imagen2 img{
+width: 60%;
+height: 60%;
+margin: 0 auto;
+}
+
+.datos2{
+	background: green;
+	width: 75%;
+	height: 100%;
+	float: left;
+}
+
+/**autorizacion tutor academico**/
+
+.label1{
+	top: -30px;
+	position: relative;
+}
+
+.label2{
+	top: 14px;
+	position: relative;
+	left: 10px;
+	width: 200px;
+}
+.label3{
+	top: 6px;
+	position: relative;
+	right: 15px;
+}
+
+.label4{
+	top: 16px;
+	position: relative;
+	left: 1px;
+}
+
+.label5{
+	top: 40px;
+	position: relative;
+	left: 25px;
+}
+
+.label6{
+	top: 70px;
+	position: relative;
+	left: 35px;
+}
+
+.checkNoautoriza{
+	position: relative;
+	top: 130px;
+	left: 400px;
+}
+
+.checkautoriza{
+	position: relative;
+	top: 170px;
+	left: 700px;
+}
+
+.Autoriza{
+	height: 600px;
+	position: relative;
+	right:140px;
+}
+
+.contenedorDatosRelevantes{
+	position: relative;
+	bottom: 805px; 
+	height: 170px;
+	width: 93.5%;
+	left:32px;
+	background-color: rgb(198,217,241);
+}
+
+.modalDatosPracticas{
+	color:black;
+	font-size: 12px;
+	transition-duration: 0s, 0s, 15s, 15s;
+}
+.Error{
+	position: relative;
+	bottom: 30px;
+	left: 260px;
+}    
+.checkError1{
+	position: relative;
+	top: 180px;
+	left: -110px;	
+}
+.checkError2{
+	position: relative;
+	top: 140px;
+	left: 200px;	
+
+}
+.checkError3{
+	position: relative;
+	top: 100px;
+	left: 450px;	
+
+}
+
+/****EVALUACIÓN***/
+.AlumnoEval
+{
+	height: 1650px;
+	position: relative;
+	top:47px;
+	background-color: rgb(198,217,241);
+	width: 103.5%;
+	left: 25px;
+
+}
+
+.rowPregunta1
+{
+	width: 78%;
+	margin-left:10px;
+	height: 30px;
+	right: 88px;
+	position: relative;
+	top:10px;
+}
+
+.colump1{
+	margin-bottom: 20px;
+	text-align: left;
+	background-color:rgb(26,50,86);
+	height: 43px;
+	color:white;
+}
+
+.colump11{
+	top:0px;
+	left:20px;
+	background-color:rgb(0,108,207);
+	color:white;
+	height:  43px;
+}
+
+.rowp2{
+	width: 78%;
+	margin-left:30px;
+	text-align: left;
+	height: 30px;
+	padding: 0px;
+	top:95px;
+	right:126px;
+	position: relative;
+
+}
+.colump111{
+	height: 40px;
+	left:20px;
+	text-align: left;
+	background-color:rgb(26,50,86);
+	color:white;
+}
+
+.rowpregunta2{
+	width: 78%;
+	margin-left:30px;
+	margin-bottom: 5px;
+	position: relative;
+	right:125px;
+	top:100px;
+}
+
+.colum2p
+{
+	color: white;
+	font-size: 15px;
+	height:40px;/*altura*/
+	left:20px;
+	top:55px;
+	background-color:rgb(26,50,86);
+	text-align: left;
+	width: 40px;
+	margin-bottom: 5px;
+	position: relative;
+
+}
+.rowpregunta3{
+	width: 78%;
+	 margin-left:30px; 
+	 margin-bottom: 5px;
+	 position: relative;
+	 left:130px;
+	 top:180px;
+}
+
+.colum23{
+	text-align: left;
+	background-color:rgb(26,50,86);
+	width: 40px;
+	margin-bottom: 5px;
+	position: relative;
+	color:white;
+}
+
+.rowpregunta4{
+	width: 78%;
+	margin-left:30px;
+	margin-bottom: 5px;
+	top:205px;
+	position: relative;
+	left:130px;
+}
+.colump4{
+	text-align: left;
+	background-color:rgb(26,50,86);
+	 width: 40px; 
+	 margin-bottom: 5px;
+	position: relative;
+	color:white;
+}
+
+.r5{
+	width: 78%; 
+	margin-left:30px;
+	margin-bottom: 5px;
+	position: relative;
+	top:235px;
+	left:130px;
+}
+
+.colr5{
+	text-align: left;
+	background-color:rgb(26,50,86);
+	width: 40px;
+	 margin-bottom: 5px;
+	 position: relative;
+	 color:white;
+}
+
+.r6{
+	width: 78%;
+	 margin-left:30px;
+	margin-bottom: 5px;
+	position: relative;
+	top:265px;
+	left:130px;
+}
+
+.colr6{
+	text-align: left;
+	 background-color:rgb(26,50,86);
+	 width: 40px;
+	 margin-bottom: 5px;
+	 position: relative;
+	 color:white;
+}
+
+.r7{
+	width: 78%; 
+	margin-left:30px;
+	margin-bottom: 5px;
+	position: relative;
+	left:130px;
+	top:295px;
+}
+
+.colr7{
+	text-align: left;
+	background-color:rgb(26,50,86);
+	width: 40px; 
+	margin-bottom: 5px;
+	position: relative;
+	color:white;
+}
+
+.r8{
+	width: 78%;
+	margin-left:30px;
+	margin-bottom: 5px;
+	position: relative;
+	top:320px;
+	left:130px;
+	height:50px;
+}
+
+.colr8{
+	text-align: left;
+	 background-color:rgb(26,50,86);
+	 width: 90px;
+	  margin-bottom: 5px;
+	   position: relative;
+	   color:white;
+}
+
+.r9{
+	width: 78%;
+	margin-left:30px; 
+	margin-bottom: 5px;
+	position: relative;
+	top:350px;
+	left: 130px;
+}
+
+.colr9{
+	text-align: left;
+	 background-color:rgb(26,50,86);
+	 width: 40px;
+	 margin-bottom: 5px;
+	 position: relative;
+	 color:white;
+}
+
+.r10{
+	width: 78%;
+	margin-left:30px;
+	margin-bottom: 5px;
+	top:380px;
+	position: relative;
+	left:130px;
+}
+
+.colr10{
+	text-align: left;
+	background-color:rgb(26,50,86);
+	width: 40px; 
+	color:white;
+	margin-bottom: 5px;
+	position: relative;
+}
+
+.row11{
+	width: 78%;
+	margin-left:30px;
+	position: relative;
+}
+
+.input11
+{
+
+	background-color: rgb(198,217,241);
+	top:160px; 
+	right:70px; 
+
+}
+
+.btnEnviarEval{
+	position: relative;
+	top:545px;
+	left: 440px;
+}
+
+.seleccionarEval{
+	top:50px;
+	background-color: rgb(198,217,241);
+	padding: 0px; 
+	left:50px;
+	position: relative;
+}
+
+.actividadesEval
+{
+	bottom:2px;
+	left:62px;
+	padding:0px;
+	height: 90px;
+}
+
+.parrafocalificar{
+	color:red;
+	font-size: 15px;
+	position: relative;
+	bottom:15px;
+}
+.parrafocalificar2{
+	color:red;
+	font-size: 15px;
+	position: relative;
+	bottom:20px;
+}
+.parrafocalificar4{
+	color:red;
+	font-size: 15px;
+	position: relative;
+	top:500px;
+	left:120px;
+}
+.parrafocalificar3{
+	color:red;
+	font-size: 15px;
+	position: relative;
+	left:120px;
+	top:450px;
+}
+
+
+.r16{
+	width: 78%;
+	margin-left:30px;
+	margin-bottom: 5px;
+	top:500px;
+	position: relative;
+	left:130px;
+}
+
+.colr16{
+	text-align: left;
+	background-color:rgb(26,50,86);
+	 
+	height: 40px;
+	color:white;
+	margin-bottom: 5px;
+	position: relative;
+}
+
+
+.r15{
+	width: 78%;
+	margin-left:30px;
+	margin-bottom: 5px;
+	top:500px;
+	position: relative;
+	left:130px;
+}
+
+.colr15{
+	text-align: left;
+	background-color:rgb(26,50,86);
+	width: 40px;
+	height: 50px; 
+	color:white;
+	margin-bottom: 5px;
+	position: relative;
+}
+
+
+.r14{
+	width: 78%;
+	margin-left:30px;
+	margin-bottom: 5px;
+	top:490px;
+	position: relative;
+	left:130px;
+}
+
+.colr14{
+	text-align: left;
+	background-color:rgb(26,50,86);
+	width: 40px; 
+	color:white;
+	margin-bottom: 5px;
+	position: relative;
+}
+
+
+.r13{
+	width: 78%;
+	margin-left:30px;
+	margin-bottom: 5px;
+	top:450px;
+	position: relative;
+	left:130px;
+}
+
+.colr13{
+	text-align: left;
+	background-color:rgb(26,50,86);
+	width: 40px; 
+	color:white;
+	margin-bottom: 5px;
+	position: relative;
+}
+
+
+.r12{
+	width: 78%;
+	margin-left:30px;
+	margin-bottom: 5px;
+	top:450px;
+	position: relative;
+	left:130px;
+}
+
+.colr12{
+	text-align: left;
+	background-color:rgb(26,50,86);
+	width: 40px; 
+	color:white;
+	margin-bottom: 5px;
+	position: relative;
+}
+
+.r11{
+	width: 78%;
+	margin-left:30px;
+	margin-bottom: 5px;
+	top:420px;
+	position: relative;
+	left:130px;
+}
+
+.colr11{
+	text-align: left;
+	background-color:rgb(26,50,86);
+	width: 40px; 
+	color:white;
+	margin-bottom: 5px;
+	position: relative;
+}
+
+.actividadesEval2
+{
+	bottom:0px;
+	left:42px;
+	padding:0px;
+	height: 90px;
+}
+
+.parrafoerrores
+{
+	color:red;
+	font-size: 18px;
+	position: relative;
+	top:175px;
+	left:50px;
+
+}
