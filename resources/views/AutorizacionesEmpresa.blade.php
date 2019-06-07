@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <link rel="stylesheet" href="/css/estilos.css">
@@ -150,45 +150,15 @@
           <a href="/">Cerrar Sesión</a>
         </li>
       </ul><!--fin del primer ul--->
-    </div>
+    </div> 
     <!---FIN DIV MENU---> 
 
       <!--DIV PARA EL LLENADO DE LA SOLICITUD-->
     <div class="tituloAutorizaciones">
-      <p class="textoAutorizaciones">AUTORIZACIONES REPORTES</p>
+      <p class="textoAutorizaciones">AUTORIZACIONES EMPRESA</p>
     </div><!--DIV titulo-->
     
-    <div class="tituloDatosTutorAcademico" style="height: 38px">
-      <p>TUTOR ACADÉMICO</p>
-    </div>
-           <!--DIV  que contiene los datos que se le piden al alumno para subir el reporte-->
-    <div class="datosAutorizaciones" >
-      <table class="tableSolPend" align="center" style="top:20px; left: -104px" >
-        <tbody>
-          <tr class="trClaveUnica">
-             <td class="tdNombre">Número de Reporte: </td>
-             <td class="tdNombre">Fecha Autorización <br>Tutor Académico: </td>
-             <td class="tdSolicitud">Comentarios <br> Tutor Académico: </td>
-          </tr>
-          @foreach($reportes as $re)
-          @if($re->idRegistroPracticas == $solicitud->idRegistroPracticas)
-            @if(($re->statusReporte == 'Aprobado')||($re->statusReporte == 'No Aprobado'))
-              <tr>
-                  <th>{{$re->numReporte}}</th>
-                  @foreach($alAutorizacionReporte as $autorizacion)
-                    @if($autorizacion->idReporte == $re->idReporte)
-                    <th>{{$autorizacion->fechaAutorizacionTutorAcademico}}</th><!--Aqui va el nombre del alumno-->
-                    <th>{{$autorizacion->comentariosTutorAcademico}}</th>
-                    @endif
-                  @endforeach
-                  <tr></tr>
-              </tr>
-            @endif
-            @endif
-          @endforeach
-        </tbody>
-      </table>
-        
+
       <div class="tituloEncargado1" style="top:80px">
         <p>ENCARGADO PRÁCTICAS</p>
       </div>
@@ -197,23 +167,24 @@
         <table class="tableSolPend1" align="center" >
           <tbody>
             <tr class="trClaveUnica">
-               <td class="tdNombre">Número de Reporte: </td>
+               <td class="tdNombre">Número de Empresa: </td>
                <td class="tdNombre">Fecha Autorización <br> Encargado: </td>
                <td class="tdSolicitud">Comentarios Encargado: </td>
             </tr>
-          @foreach($reportes as $re)
-                    @if($re->idRegistroPracticas == $solicitud->idRegistroPracticas)
-
-            @if(($re->statusReporte == 'Aprobado')||($re->statusReporte == 'No Aprobado'))
+          @foreach($alAutorizacionEmpresa as $alEmp)
+            @if($alEmp->idRegistroPracticas == $solicitud->idRegistroPracticas)
+            @if($alEmp->statusEncargado == '0')
               <tr>
-                  <th>{{$re->numReporte}}</th>
-                  @foreach($alAutorizacionReporte as $autorizacion)
-                    @if($autorizacion->idReporte == $re->idReporte)
-                    <th>{{$autorizacion->fechaAutorizacionEncargado}}</th><!--Aqui va el nombre del alumno-->
-                    <th>{{$autorizacion->comentariosEncargado}}</th>
-                    @endif
-                  @endforeach
+             @foreach($empresa as $emp)
+                    @if($alEmp->idEmpresa == $emp->idEmpresa)
+                  
+                  <th>{{$emp->Nombre}}</th>
+                    <th>{{$alEmp->fechaAutorizacionEncargado}}</th><!--Aqui va el nombre del alumno-->
+                    <th>{{$alEmp->comentariosEncargado}}</th>
                   <tr></tr>
+                    @endif
+                    @endforeach
+            
               </tr>
             @endif
             @endif

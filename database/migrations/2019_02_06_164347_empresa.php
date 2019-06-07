@@ -21,6 +21,7 @@ class Empresa extends Migration
             $table->string('Giro');
             $table->integer('Telefono');
             $table->boolean('registrada')->default(false);
+            $table->string('status')->nullable();
             $table->timestamps();
         });
     }

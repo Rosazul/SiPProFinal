@@ -9,7 +9,7 @@ use Illuminate\Support\Carbon;
 use App\Empresa;
 use App\Asesor;
 use App\Encargado;
-use App\registroPracticas;
+use App\registroPracticas; 
 use Illuminate\Http\Request;
 
 class AutorizacionesReportesController extends Controller

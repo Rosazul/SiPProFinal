@@ -67,6 +67,7 @@ Route::get('/alumnoAutorizaciones/{clave}', 'AlumnoAutorizacionesController@Alum
 
 Route::get('/alumnoAutorizacionesReportes/{clave}', 'AlumnoAutorizacionesController@AlumnoAutorizacionesReportes');
 
+Route::get('/AutorizacionesEmpresa/{clave}', 'AlumnoAutorizacionesController@AlumnoAutorizacionesEmpresa');
 /*********************************************************************************/
 Route::get('/autorizaTutorAcademico/{rpe}/{clave}', 'AutorizacionesController@autorizaciones');
 

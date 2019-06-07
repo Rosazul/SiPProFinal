@@ -9,6 +9,8 @@ use App\registroPracticas;
 use App\Reportes;
 use App\AutorizacionesReportes;
 use App\Autorizaciones;
+use App\AutorizacionEmpresa;
+use App\Empresa;
 use Illuminate\Support\Carbon;
 
 class AlumnoAutorizacionesController extends Controller
@@ -39,5 +41,20 @@ class AlumnoAutorizacionesController extends Controller
        // dd($autorizacionesReportes);
         // dd($autorizaciones);
         return view('alumnoAutorizacionesReportes')->with('alumno',$alumno)->with('fecha',$fecha)->with('tutor',$tutor)->with('alAutorizacionReporte',$autoReporte)->with('solicitud',$solicitud)->with('reportes',$reportes); 
+    }
+
+    public function AlumnoAutorizacionesEmpresa($claveUnica){
+        $alumno=Alumno::where('claveUnica','=',$claveUnica)->first();
+        $tutor=TutorAcademico::where('id','=',$alumno->idTutorAcademico)->first();
+        // dd($tutor);
+        $fecha = Carbon::now()->formatLocalized('%A %d %B %Y');
+
+        $solicitud=registroPracticas::where('claveUnica','=',$alumno->claveUnica)->first();
+
+        $empresa= Empresa::all();        
+        $autoEmpresa=AutorizacionEmpresa::all();
+       // dd($autorizacionesReportes);
+        // dd($autorizaciones);
+        return view('AutorizacionesEmpresa')->with('alumno',$alumno)->with('fecha',$fecha)->with('tutor',$tutor)->with('alAutorizacionEmpresa',$autoEmpresa)->with('solicitud',$solicitud)->with('empresa',$empresa); 
     }
 }

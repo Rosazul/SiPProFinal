@@ -96,7 +96,7 @@
                 @endif
                </li>
                 <li>
-               @if(!isset($solicitud))
+                @if(!isset($solicitud)||($solicitud->guardaDatosEmpresa=='0'))
                   <a href="/datosEmpresa/{{$alumno->claveUnica}}">Llenar Datos de la Empresa
                   </a>
                 @endif 
@@ -106,7 +106,7 @@
                 @endif
                 </li>
                 <li>
-                @if(!isset($solicitud))
+                @if(!isset($solicitud)||($solicitud->guardaDatosAsesor=='0'))
                   <a href="/datosAsesor/{{$alumno->claveUnica}}">Llenar Datos del Asesor
                   </a>
                 @endif 
@@ -311,7 +311,7 @@
             <input type="button" data-toggle="modal" data-target="#proponerEmpresa" class="btn btn-primary bGuardar1" value="Proponer Empresa">
             </div>
             <div class="col-6 colProponer2" >
-            <input type="button" data-toggle="modal" data-target="#proponerEmpresaDireccion" class="btn btn-primary bGuardar1" value="Proponer Empresa y Direccion">
+            <!--<input type="button" data-toggle="modal" data-target="#proponerEmpresaDireccion" class="btn btn-primary bGuardar1" value="Proponer Empresa y Direccion">-->
             </div>
           </div><!--DIV row5-->         
   </div>  <!--DIV Empresa-->
@@ -355,6 +355,8 @@
            op2.value=op1.value;
            op3.value=op1.value;
            op4.value=op1.value;
+//           op3.value = op2.value;
+  //         op4.value=op2.value;
            op2.disabled=true;
            op3.disabled=true;
            op4.disabled=true;

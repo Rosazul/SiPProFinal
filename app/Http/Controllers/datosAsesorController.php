@@ -13,6 +13,7 @@ use Illuminate\Support\Carbon;
 use App\Mail\CorreoEvaluacion;
 use App\Mail\CorreoReporte;
 use App\Mail\CorreoSolicitud;
+use App\Mail\EmpresaPropuesta;
 use Illuminate\Support\Facades\Mail;
 
 class datosAsesorController extends Controller
@@ -79,6 +80,11 @@ class datosAsesorController extends Controller
         {
           $sP->statusSolicitud = 'En Proceso';
           $sP->update(['En Proceso' => $sP->statusSolicitud]);
+        }
+        if(($sP->statusSolicitud == 'No Aprobada')&&($sP->lugarError=='3'))
+        {
+            $sP->statusSolicitud = 'En Proceso';
+            $sP->lugarError = null;
         }
 
         $sP->save();

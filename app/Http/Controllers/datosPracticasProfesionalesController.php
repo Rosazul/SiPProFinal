@@ -50,24 +50,46 @@ class datosPracticasProfesionalesController extends Controller
         $fechaInicio = request('fechaInicio');
         $fechaFin = request('fechaFin');
         $actividades = request('acts');
-
-        $sP = new registroPracticas();//objeto para meter los valores al objeto
-
-        $sP->claveUnica = $alumno->claveUnica;
-        $sP->tipoPracticas = $tipoPractica;
-        $sP->horaEntrada = $horaEntrada;
-        $sP->horaSalida = $horaSalida;
-        $sP->fechaInicio = $fechaInicio;
-        $sP->fechaFin = $fechaFin;
-        $sP->actividad = $actividades;
-        
-        if($sP->guardaDatosPracticas == false)
+        $sP =registroPracticas::where('claveUnica','=',$alumno->claveUnica)->first();
+//        dd($sP);
+        if($sP)
         {
-          $sP->guardaDatosPracticas = true;
-          $sP->update(['true' => $sP->guardaDatosPracticas]);
-        }
-        $sP->save();
+            $sP->tipoPracticas = $tipoPractica;
+            $sP->horaEntrada = $horaEntrada;
+            $sP->horaSalida = $horaSalida;
+            $sP->fechaInicio = $fechaInicio;
+            $sP->fechaFin = $fechaFin;
+            $sP->actividad = $actividades;            
 
-        return redirect('datosEmpresa/'.$clave);
+            if($sP->guardaDatosPracticas == false)
+            {
+              $sP->guardaDatosPracticas = true;
+              $sP->update(['true' => $sP->guardaDatosPracticas]);
+            }
+            $sP->idAcreditacionTutorAcademico = null;
+            $sP->idAcreditacionEncargado = null;
+            $sP->statusSolicitud = 'En Proceso';
+            $sP->save();
+            return redirect('datosEmpresaConDatos/'.$clave);
+        }else
+        {
+            $sP = new registroPracticas();//objeto para meter los valores al objeto
+
+            $sP->claveUnica = $alumno->claveUnica;
+            $sP->tipoPracticas = $tipoPractica;
+            $sP->horaEntrada = $horaEntrada;
+            $sP->horaSalida = $horaSalida;
+            $sP->fechaInicio = $fechaInicio;
+            $sP->fechaFin = $fechaFin;
+            $sP->actividad = $actividades;
+            
+            if($sP->guardaDatosPracticas == false)
+            {
+              $sP->guardaDatosPracticas = true;
+              $sP->update(['true' => $sP->guardaDatosPracticas]);
+            }
+            $sP->save();            
+            return redirect('datosEmpresa/'.$clave);
+        }
     }
 }

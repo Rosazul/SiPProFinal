@@ -7,8 +7,15 @@ use App\Alumno;
 use App\TutorAcademico;
 use App\registroPracticas; 
 use App\Empresa;
+use App\Encargado; 
 use App\Reportes;
 use Illuminate\Support\Carbon;
+
+use App\Mail\CorreoEvaluacion;
+use App\Mail\CorreoReporte;
+use App\Mail\CorreoSolicitud;
+use App\Mail\EmpresaPropuesta;
+use Illuminate\Support\Facades\Mail;
 
 class datosEmpresaController extends Controller
 {
@@ -67,10 +74,10 @@ class datosEmpresaController extends Controller
     {
 
         $sP=registroPracticas::where('claveUnica','=',$clave)->first();
-
+        //$encargado=Encargado::where('id','=',$alumno->idEncargado)->first();
         $nombreEmpresa = request('nombreEmpresa');
         $direccion = request('direccionE');
-        $giro = request('giroE');
+        $giro = request('giroE'); 
         $telefonoEmpresa = request('telefonoE');
 
         $emp = new Empresa();
@@ -79,6 +86,7 @@ class datosEmpresaController extends Controller
         $emp->Direccion = $direccion;
         $emp->Giro = $giro;
         $emp->Telefono=$telefonoEmpresa;
+
         $emp->save(); 
 
         $sP->idEmpresa = $emp->idEmpresa;
@@ -89,6 +97,7 @@ class datosEmpresaController extends Controller
         }
 
         $sP->save();
+      //  Mail::to($encargado->correo)->send(new CorreoEmpresaPropuesta());
 
         return redirect('/menuAlumno/'.$clave);
     }
@@ -100,12 +109,15 @@ class datosEmpresaController extends Controller
         $giro = request('giro');
         $telefonoEmpresa = request('telefono');
 
-        $emp = Empresa::find($nombreEmpresa);
+        $emp2 = Empresa::where('idEmpresa','=',$nombreEmpresa)->first();
+        $emp = new Empresa();
 
-        $emp->Nombre=$emp->Nombre;
+        $emp->Nombre=$emp2->Nombre;
         $emp->Direccion = $direccion;
         $emp->Giro = $giro;
         $emp->Telefono=$telefonoEmpresa;
+        $emp->registrada = '0';
+
         $emp->save();
 
         $sP=registroPracticas::where('claveUnica','=',$clave)->first();

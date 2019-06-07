@@ -95,7 +95,7 @@
                 @endif
                </li>
                 <li>
-                @if(!isset($solicitud)&&($solicitud->guardaDatosEmpresa == '0'))
+                @if(!isset($solicitud)||($solicitud->guardaDatosEmpresa=='0'))
                   <a href="/datosEmpresa/{{$alumno->claveUnica}}">Llenar Datos de la Empresa
                   </a>
                 @endif 
@@ -105,7 +105,7 @@
                 @endif
                 </li>
                 <li>
-                @if(!isset($solicitud)&&($solicitud->guardaDatosAsesor == '0'))
+                @if(!isset($solicitud)||($solicitud->guardaDatosAsesor=='0'))
                   <a href="/datosAsesor/{{$alumno->claveUnica}}">Llenar Datos del Asesor
                   </a>
                 @endif 

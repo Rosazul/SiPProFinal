@@ -64,34 +64,91 @@ class AutorizacionesController extends Controller
         $lugarError = request("check");
         
         $sol=registroPracticas::where('claveUnica','=',$alumno->claveUnica)->first();
-        $autorizatutor = new Autorizaciones();//objeto para meter los valores al objeto
-//        dd($sol);
-        $autorizatutor->idRegistroPracticas = $sol->idRegistroPracticas;
-        $autorizatutor->rpeTutorAcademico = $tutor->rpe;
-        $autorizatutor->comentariosTutorAcademico = $comentariotutor;
-        $autorizatutor->fechaAutorizacionTutorAcademico= $fecha;
-        // dd($autorizatutor->fechaAutorizacionTutorAcademico);
-        $autorizatutor->statusTutorAcademico = $status;
+        $autorizacionExistente = Autorizaciones::where('idRegistroPracticas','=',$sol->idRegistroPracticas)->first();
+        //dd($autorizacionExistente);
+        if($autorizacionExistente)
+        {
+          $autorizacionExistente->rpeTutorAcademico = $tutor->rpe;
+          $autorizacionExistente->comentariosTutorAcademico = $comentariotutor;
+          $autorizacionExistente->fechaAutorizacionTutorAcademico= $fecha;
+          // dd($autorizatutor->fechaAutorizacionTutorAcademico);
+          $autorizacionExistente->statusTutorAcademico = $status;          
+
+          $error = new detalleError();
+
+          if($autorizacionExistente->statusTutorAcademico == '0')
+          {
+            $autorizacionExistente->statusTutorAcademico = 0;
+            $error->idRegistroPracticas = $autorizacionExistente->idRegistroPracticas;
+            $error->lugarError = $lugarError;
+            $error->comentarios = $autorizacionExistente->comentariosTutorAcademico;
+            $sol->lugarError = $error->lugarError;
+          }
+          if($autorizacionExistente->statusTutorAcademico == '1')
+          {
+            $autorizacionExistente->statusTutorAcademico = 1;
+            $sol->statusSolicitud = 'Aprobada';
+
+            if($autorizacionExistente->statusEncargado == '1' && $autorizacionExistente->statusTutorAcademico == '1')
+            {
+              $sol->statusSolicitud = 'Aprobada';
+              $sol->idAcreditacionTutorAcademico = '1';
+              $sol->idAcreditacionEncargado = '1';
+              $sol->lugarError = '0';
+            }
+            if($autorizacionExistente->statusEncargado == '1' && $autorizacionExistente->statusTutorAcademico == '0')
+            {
+              $sol->statusSolicitud = 'No Aprobada';
+              $sol->idAcreditacionTutorAcademico = '0';
+              $sol->idAcreditacionEncargado = '1';
+            }
+            if($autorizacionExistente->statusEncargado == '0' && $autorizacionExistente->statusTutorAcademico == '1')
+            {
+              $sol->statusSolicitud = 'No Aprobada';
+              $sol->idAcreditacionTutorAcademico = '1';
+              $sol->idAcreditacionEncargado = '0';
+            }
+            if($autorizacionExistente->statusEncargado == '0' && $autorizacionExistente->statusTutorAcademico == '0')
+            {
+              $sol->statusSolicitud = 'No Aprobada';
+              $sol->idAcreditacionTutorAcademico = '0';
+              $sol->idAcreditacionEncargado = '0';
+            }
+          }
+          $autorizacionExistente->save();//para guardar en la base de datos
+          $error->save();
+          $sol->save();
+        }
+        else
+        {
+          $autorizatutor = new Autorizaciones();//objeto para meter los valores al objeto
+  //        dd($sol);
+          $autorizatutor->idRegistroPracticas = $sol->idRegistroPracticas;
+          $autorizatutor->rpeTutorAcademico = $tutor->rpe;
+          $autorizatutor->comentariosTutorAcademico = $comentariotutor;
+          $autorizatutor->fechaAutorizacionTutorAcademico= $fecha;
+          // dd($autorizatutor->fechaAutorizacionTutorAcademico);
+          $autorizatutor->statusTutorAcademico = $status;
         
-        $error = new detalleError();
+          $error = new detalleError();
 
-        if($autorizatutor->statusTutorAcademico == '0')
-        {
-          $autorizatutor->statusTutorAcademico = 0;
-          $error->idRegistroPracticas = $autorizatutor->idRegistroPracticas;
-          $error->lugarError = $lugarError;
-          $error->comentarios = $autorizatutor->comentariosTutorAcademico;
-          $sol->lugarError = $error->lugarError;
+          if($autorizatutor->statusTutorAcademico == '0')
+          {
+            $autorizatutor->statusTutorAcademico = 0;
+            $error->idRegistroPracticas = $autorizatutor->idRegistroPracticas;
+            $error->lugarError = $lugarError;
+            $error->comentarios = $autorizatutor->comentariosTutorAcademico;
+            $sol->lugarError = $error->lugarError;
+          }
+
+          if($autorizatutor->statusTutorAcademico == '1')
+          {
+            $autorizatutor->statusTutorAcademico = 1;
+          }
+          $autorizatutor->save();//para guardar en la base de datos
+          $error->save();
+          $sol->save();
         }
-
-        if($autorizatutor->statusTutorAcademico == '1')
-        {
-          $autorizatutor->statusTutorAcademico = 1;
-        }
-
-    	$autorizatutor->save();//para guardar en la base de datos
-      $error->save();
-      $sol->save();
     	return redirect('TutorAcademicoSolicitudesPendientes/'.$rpe);//para regresar a la pagina principal
     }
 

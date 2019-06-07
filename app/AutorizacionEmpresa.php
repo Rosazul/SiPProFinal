@@ -9,7 +9,7 @@ class AutorizacionEmpresa extends Model
 	protected $table = 'autorizacionempresa';
 	protected $primaryKey = 'idAutorizacionEmpresa'; 
 	protected $fillable = [
-       		'idAutorizacionEmpresa','idRegistroPracticas', 'rpeEncargado', 'fechaAutorizacionEncargado', 'comentariosEncargado', 'statusEncargado'
+       		'idAutorizacionEmpresa','idEmpresa','idRegistroPracticas', 'rpeEncargado', 'fechaAutorizacionEncargado', 'comentariosEncargado', 'statusEncargado'
     ]; 
     //
 }

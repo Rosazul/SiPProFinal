@@ -16,6 +16,7 @@ class AutorizacionEmpresa extends Migration
         Schema::create('AutorizacionEmpresa', function (Blueprint $table) {
             $table->increments('idAutorizacionEmpresa');
             $table->integer('idRegistroPracticas');        
+            $table->integer('idEmpresa');        
             $table->integer('rpeEncargado')->nullable();
             $table->date('fechaAutorizacionEncargado')->nullable();            
             $table->string('comentariosEncargado')->nullable();           

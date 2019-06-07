@@ -12,6 +12,7 @@ use File;
 use App\Mail\CorreoEvaluacion;
 use App\Mail\CorreoReporte;
 use App\Mail\CorreoSolicitud;
+use App\Mail\EmpresaPropuesta;
 use Illuminate\Support\Facades\Mail;
 
 class ReportesController extends Controller

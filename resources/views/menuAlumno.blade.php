@@ -47,7 +47,7 @@
                 @if($solicitud->lugarError == '1')
                   <a href="/datosPracticasProfesionales/{{$alumno->claveUnica}}" class="btn btn-success">Aceptar</a>
                 @endif
-                @if($solicitud->lugarError == '2')
+                @if(($solicitud->lugarError == '2')||($emp->registrada == '2'))
                   <a href="/datosEmpresa/{{$alumno->claveUnica}}" class="btn btn-warning">Aceptar</a>
                 @endif
                 @if($solicitud->lugarError == '3')
@@ -69,7 +69,9 @@
                </div>
                <div class="modal-body">
                 @foreach($reportes as $repo)
+                  @if($repo->idRegistroPracticas == $solicitud->idRegistroPracticas)
                     <p class="texto-modal">El Estado del Reporte {{$repo->numReporte}} es {{$repo->statusReporte}}</p>
+                  @endif
                 @endforeach
              </div>
                <div class="modal-footer">
@@ -197,19 +199,31 @@
           </li>            
         @endif
 
+        @if(isset($solicitud))
         @if(isset($repo))
             <li class="menuitem">
                 <a href="/alumnoAutorizacionesReportes/{{$alumno->claveUnica}}" >Autorizaciones Reportes</a>
             </li> 
+          @endif
+        @endif
+
+        @if(isset($solicitud))
+          @if($emp->status == 'No Autorizada')
+            <li class="menuitem">
+                <a href="/AutorizacionesEmpresa/{{$alumno->claveUnica}}" >Autorizaciones Empresas</a>
+            </li> 
+            @endif
         @endif
 
         @if(isset($reportes))
-        @foreach($reportes as $repo)
-          @if(($repo->numReporte == 'REPORTE FINAL')&&($repo->statusReporte == 'Aprobado'))
-           <li class="menuitem">
-            <a href="/EvaluacionAlumnoEmpresa/{{$alumno->claveUnica}}">Evaluacion</a>
-          </li>
-          @endif
+          @foreach($reportes as $repo)
+            @if($repo->idRegistroPracticas == $solicitud->idRegistroPracticas)
+              @if(($repo->numReporte == 'REPORTE FINAL')&&($repo->statusReporte == 'Aprobado'))
+                <li class="menuitem">
+                  <a href="/EvaluacionAlumnoEmpresa/{{$alumno->claveUnica}}">Evaluacion</a>
+                </li>
+              @endif
+            @endif
           @endforeach
         @endif
 

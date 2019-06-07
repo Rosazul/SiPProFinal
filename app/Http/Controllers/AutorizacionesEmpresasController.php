@@ -54,6 +54,7 @@ class AutorizacionesEmpresasController extends Controller
         $autorizaciones= new AutorizacionEmpresa();
 
         $autorizaciones->idRegistroPracticas = $alumno->idRegistroPracticas;
+        $autorizaciones->idEmpresa = $emp->idEmpresa;
         $autorizaciones->rpeEncargado = $encargado->rpe;
         $autorizaciones->comentariosEncargado = $comentarioEncargado;
         $autorizaciones->fechaAutorizacionEncargado= $fechaAutorizacion;
@@ -63,13 +64,15 @@ class AutorizacionesEmpresasController extends Controller
         if($autorizaciones->statusEncargado == '0')
         {
           $autorizaciones->statusEncargado = 0;
-          $emp->registrada = 0;
+          $emp->registrada = 2;
+          $emp->status = 'No Autorizada';
         }
 
         if($autorizaciones->statusEncargado == '1')
         {
           $autorizaciones->statusEncargado = 1;
           $emp->registrada = 1;
+          $emp->status = 'Autorizada';
         }
         $emp->save();
     	$autorizaciones->save();//para guardar en la base de datos
