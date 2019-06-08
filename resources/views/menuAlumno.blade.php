@@ -189,7 +189,7 @@
           @if($solicitud->statusSolicitud == "Aprobada")
               <li class="menuitem" >
                   <a href="/reportes/{{$alumno->claveUnica}}" >Subir Reportes</a>
-              </li>            
+              </li>
           @endif
         @endif
         
@@ -200,10 +200,12 @@
         @endif
 
         @if(isset($solicitud))
+        @if($solicitud->claveUnica == $alumno->claveUnica)
         @if(isset($repo))
             <li class="menuitem">
                 <a href="/alumnoAutorizacionesReportes/{{$alumno->claveUnica}}" >Autorizaciones Reportes</a>
             </li> 
+          @endif
           @endif
         @endif
 

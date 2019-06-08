@@ -114,9 +114,10 @@
           @if($solicitud->statusSolicitud == "Aprobada")
               <li class="menuitem" >
                   <a href="/reportes/{{$alumno->claveUnica}}" >Subir Reportes</a>
-              </li>            
+              </li>
           @endif
         @endif
+
           @if((isset($solicitud->idAcreditacionTutorAcademico)) && (isset($solicitud->idAcreditacionTutorAcademico)))
             <li class="menuitem" >
                 <a href="/alumnoAutorizaciones/{{$alumno->claveUnica}}" >Autorizaciones <br> de la Solicitud</a>
@@ -131,12 +132,18 @@
         @endif
         @endif
 
-          @if(isset($reportes)&&($reportes->numReporte == 'REPORTE FINAL')))
-           <li class="menuitem">
-            <a href="/EvaluacionAlumnoEmpresa/{{$alumno->claveUnica}}">Evaluacion</a>
-          </li>
-          @endif
-        
+        @if(isset($reportes))
+          @foreach($reportes as $repo)
+            @if($repo->idRegistroPracticas == $solicitud->idRegistroPracticas)
+              @if(($repo->numReporte == 'REPORTE FINAL')&&($repo->statusReporte == 'Aprobado'))
+                <li class="menuitem">
+                  <a href="/EvaluacionAlumnoEmpresa/{{$alumno->claveUnica}}">Evaluacion</a>
+                </li>
+              @endif
+            @endif
+          @endforeach
+        @endif
+
         <li class="menuitem">
           <a href="/ayuda/{{$alumno->claveUnica}}" data-toggle="modal" data-target="#ayuda">Ayuda</a>
         </li>

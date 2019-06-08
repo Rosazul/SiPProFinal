@@ -22,7 +22,8 @@ class AlumnoAutorizacionesController extends Controller
         $fecha = Carbon::now()->formatLocalized('%A %d %B %Y');
 
         $solicitud=registroPracticas::where('claveUnica','=',$alumno->claveUnica)->first();
-        $reportes = Reportes::where('idRegistroPracticas','=',$solicitud->idRegistroPracticas)->first();
+        $reportes = Reportes::all();
+        //dd($reportes);
     	$autorizaciones=Autorizaciones::where('idRegistroPracticas','=',$solicitud->idRegistroPracticas)->first();
         // dd($autorizaciones);
     	return view('alumnoAutorizaciones')->with('alumno',$alumno)->with('fecha',$fecha)->with('tutor',$tutor)->with('alAutorizacion',$autorizaciones)->with('solicitud',$solicitud)->with('reportes',$reportes); 

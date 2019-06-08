@@ -14,7 +14,7 @@ use Illuminate\Http\Request;
 
 class AutorizacionesReportesController extends Controller
 {
-    public function AutorizacionesReportes($rpe, $idReporte)
+  /*  public function AutorizacionesReportes($rpe, $idReporte)
     {
         $tutor=TutorAcademico::where('rpe','=',$rpe)->first();
        
@@ -37,7 +37,7 @@ class AutorizacionesReportesController extends Controller
         $fechaAut = $fechaAut->format('d-m-Y');
         //dd($rpe);
         return view('autorizaReportesTutorAcademico')->with('tutor',$tutor)->with('registroreporte',$reportes)->with('alumno',$alumno)->with('fecha',$fecha)->with('emp',$emp)->with('ase',$asesor)->with('fechaAut',$fechaAut)->with('archivo',$archivoReporte)->with('solicitud',$solicitud);        
-    } 
+    } */
     public function AutorizacionesReportesEncargado($rpe, $idReporte)
     {
         $encargado=Encargado::where('rpe','=',$rpe)->first();
@@ -78,7 +78,7 @@ class AutorizacionesReportesController extends Controller
         return response()->download($archivoReporte);
     }
 
-    public function GuardaAcreditacionReportesTutor($rpe,$idReporte)
+  /*  public function GuardaAcreditacionReportesTutor($rpe,$idReporte)
     {
         $tutor = TutorAcademico::where('rpe','=',$rpe)->first();        
 
@@ -121,7 +121,7 @@ class AutorizacionesReportesController extends Controller
     	$autorizatutor->save();//para guardar en la base de datos
 
     	return redirect('tutorAcademicoReportesPendientes/'.$rpe);//para regresar a la pagina principal
-    }
+    }*/
 
     public function GuardaAcreditacionReportesEncargado($rpe,$idReporte)
     {
@@ -142,11 +142,10 @@ class AutorizacionesReportesController extends Controller
         $path=storage_path('app/public');
         $path=$path."/".$reportes->nombreArchivo;
         //dd($path);
-        $autorizaciones=AutorizacionesReportes::where('idReporte','=',$reportes->idReporte)->first();
-        // dd($autorizaciones);
-
-        $autorizaciones->idReporte = $autorizaciones->idReporte;
-        // dd($autorizaciones->idAutorizacionReportes);
+        $autorizaciones=new AutorizacionesReportes();
+ 
+        $autorizaciones->idRegistroPracticas = $registropracticas->idRegistroPracticas;
+        $autorizaciones->idReporte = $reportes->idReporte;
         $autorizaciones->rpeEncargado = $encargado->rpe;
         $autorizaciones->comentariosEncargado = $comentarioEncargado;
         $autorizaciones->fechaAutorizacionEncargado= $fechaAutorizacion;
@@ -155,41 +154,15 @@ class AutorizacionesReportesController extends Controller
         if($autorizaciones->statusEncargado == '0')
         {
           $autorizaciones->statusEncargado = 0;
-//          $autorizatutor->update(['false' => $autorizatutor->statusTutorAcademico]);
+          $reportes->statusReporte = 'No Aprobado';
         }
-
         if($autorizaciones->statusEncargado == '1')
         {
           $autorizaciones->statusEncargado = 1;
-  //        $autorizatutor->update(['true' => $autorizatutor->statusTutorAcademico]);
-        }
-		// dd($autorizaciones);
-
-    	$autorizaciones->save();//para guardar en la base de datos
-
-        if($autorizaciones->statusEncargado == '1' && $autorizaciones->statusTutorAcademico == '1')
-        {
           $reportes->statusReporte = 'Aprobado';
-  //        $autorizatutor->update(['true' => $autorizatutor->statusTutorAcademico]);
         }
-        if($autorizaciones->statusEncargado == '1' && $autorizaciones->statusTutorAcademico == '0')
-        {
-          $reportes->statusReporte = 'No Aprobado';
-  //        $autorizatutor->update(['true' => $autorizatutor->statusTutorAcademico]);
-        }
-        if($autorizaciones->statusEncargado == '0' && $autorizaciones->statusTutorAcademico == '1')
-        {
-          $reportes->statusReporte = 'No Aprobado';
-  //        $autorizatutor->update(['true' => $autorizatutor->statusTutorAcademico]);
-        }
-        if($autorizaciones->statusEncargado == '0' && $autorizaciones->statusTutorAcademico == '0')
-        {
-          $reportes->statusReporte = 'No Aprobado';
-  //        $autorizatutor->update(['true' => $autorizatutor->statusTutorAcademico]);
-        }
-        $reportes->save();
- 
-
+    	$autorizaciones->save();//para guardar en la base de datos
+        $reportes->save(); 
     	return redirect('encargadoReportesPendientes/'.$rpe);//para regresar a la pagina principal
     }
 }

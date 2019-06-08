@@ -30,18 +30,22 @@ class menuAlumnoController extends Controller
             foreach ($reportes as $repo) 
             {
                 $repo = Reportes::where('idRegistroPracticas','=',$solicitud->idRegistroPracticas)->first();
+               // dd($repo);
                 $fecha = Carbon::now()->formatLocalized('%A %d %B %Y');
                // dd($emp);
                 return view('menuAlumno')->with('alumno',$alumno)->with('fecha',$fecha)->with('tutor',$tutor)->with('solicitud',$solicitud)->with('reportes',$reportes)->with('repo',$repo)->with('emp',$emp);
 
             }
+            $fecha = Carbon::now()->formatLocalized('%A %d %B %Y');
+               // dd($emp);
+            return view('menuAlumno')->with('alumno',$alumno)->with('fecha',$fecha)->with('tutor',$tutor)->with('solicitud',$solicitud)->with('reportes',$reportes)->with('reportes',$reportes)->with('emp',$emp);
         }
         else
         {
+        $emp = null;
             $reportes=null;
         }
     //dd($solicitud);
-        $emp = Empresa::where('idEmpresa','=',$solicitud->idEmpresa)->first();
         $fecha = Carbon::now()->formatLocalized('%A %d %B %Y');
         return view('menuAlumno')->with('alumno',$alumno)->with('fecha',$fecha)->with('tutor',$tutor)->with('solicitud',$solicitud)->with('reportes',$reportes)->with('emp',$emp);
 

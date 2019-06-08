@@ -129,6 +129,14 @@
             </li>            
           @endif
 
+        @if(isset($solicitud))
+        @if(isset($reportes))
+          <li class="menuitem">
+              <a href="/alumnoAutorizacionesReportes/{{$alumno->claveUnica}}" >Autorizaciones Reportes</a>
+          </li>            
+        @endif
+        @endif
+
         @if(isset($reportes)&&isset($solicitud))
           @if(($reportes->statusReporte == "Aprobado") && ($reportes->numReporte == 'REPORTE FINAL'))
            <li class="menuitem">

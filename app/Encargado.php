@@ -8,6 +8,6 @@ class Encargado extends Model
 {
      protected $table = 'encargado';
 	protected $fillable = [
-        'id', 'rpe','nombre', 'password', 'correo'
+        'id', 'rpe','nombre', 'carrera', 'cargo', 'password', 'correo'
     ]; 
 }

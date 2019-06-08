@@ -17,6 +17,8 @@ class Encargado extends Migration
             $table->increments('id');
             $table->integer('rpe');
             $table->string('nombre');
+            $table->string('cargo');
+            $table->string('carrera');
             $table->string('password');
             $table->string('correo')->nullable();
             $table->rememberToken();

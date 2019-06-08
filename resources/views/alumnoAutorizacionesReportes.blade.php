@@ -158,37 +158,8 @@
       <p class="textoAutorizaciones">AUTORIZACIONES REPORTES</p>
     </div><!--DIV titulo-->
     
-    <div class="tituloDatosTutorAcademico" style="height: 38px">
-      <p>TUTOR ACADÉMICO</p>
-    </div>
            <!--DIV  que contiene los datos que se le piden al alumno para subir el reporte-->
-    <div class="datosAutorizaciones" >
-      <table class="tableSolPend" align="center" style="top:20px; left: -104px" >
-        <tbody>
-          <tr class="trClaveUnica">
-             <td class="tdNombre">Número de Reporte: </td>
-             <td class="tdNombre">Fecha Autorización <br>Tutor Académico: </td>
-             <td class="tdSolicitud">Comentarios <br> Tutor Académico: </td>
-          </tr>
-          @foreach($reportes as $re)
-          @if($re->idRegistroPracticas == $solicitud->idRegistroPracticas)
-            @if(($re->statusReporte == 'Aprobado')||($re->statusReporte == 'No Aprobado'))
-              <tr>
-                  <th>{{$re->numReporte}}</th>
-                  @foreach($alAutorizacionReporte as $autorizacion)
-                    @if($autorizacion->idReporte == $re->idReporte)
-                    <th>{{$autorizacion->fechaAutorizacionTutorAcademico}}</th><!--Aqui va el nombre del alumno-->
-                    <th>{{$autorizacion->comentariosTutorAcademico}}</th>
-                    @endif
-                  @endforeach
-                  <tr></tr>
-              </tr>
-            @endif
-            @endif
-          @endforeach
-        </tbody>
-      </table>
-        
+    <div class="datosAutorizaciones" >        
       <div class="tituloEncargado1" style="top:80px">
         <p>ENCARGADO PRÁCTICAS</p>
       </div>

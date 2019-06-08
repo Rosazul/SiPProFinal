@@ -52,11 +52,6 @@
                   <a href="/TutorAcademicoSolicitudesPendientes/{{$tutor->rpe}}">SOLICITUDES Pendientes de Autorizar</a>
               </li>
           </ul>
-            <ul class="submenuRegistroTutor" >
-              <li>
-                    <a href="/tutorAcademicoReportesPendientes/{{$tutor->rpe}}">REPORTES Pendientes de Autorizar</a>
-              </li>  
-          </ul>
          
         </li>
         <li class="menuitem" style="width: 180px">

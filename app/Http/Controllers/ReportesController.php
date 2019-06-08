@@ -7,6 +7,7 @@ use App\registroPracticas;
 use App\TutorAcademico;
 use App\Reportes;
 use App\Empresa;
+use App\Encargado;
 use File; 
 
 use App\Mail\CorreoEvaluacion;
@@ -38,7 +39,8 @@ class ReportesController extends Controller
         $registroreporte=registroPracticas::where('claveUnica','=',$alumno->claveUnica)->first();
         $reportes=Reportes::where('idRegistroPracticas','=',$registroreporte->idRegistroPracticas)->first();
        
-       
+       $encargado = Encargado::where('carrera','=',$alumno->carrera)->first();
+
         $numeroReporte = request('numReporte');
         //dd($numeroReporte);
         $fechaInicio = request('fechaInicio');
@@ -95,7 +97,7 @@ class ReportesController extends Controller
         
         $sP->statusReporte = 'En Proceso';
         $sP->save(); 
-    Mail::to($tutor->correo)->send(new CorreoReporte());
+    Mail::to($encargado->correo)->send(new CorreoReporte());
 
         return redirect('menuAlumno/'.$clave);
     }

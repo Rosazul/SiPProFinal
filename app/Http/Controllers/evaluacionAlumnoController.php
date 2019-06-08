@@ -26,7 +26,7 @@ class evaluacionAlumnoController extends Controller
         $tutor=TutorAcademico::where('id','=',$alumno->idTutorAcademico)->first();
 
         $solicitud = registroPracticas::where('claveUnica','=',$alumno->claveUnica)->first();
-        $reportes = Reportes::where('idRegistroPracticas','=',$solicitud->idRegistroPracticas)->first();
+        $reportes = Reportes::all();
 
         $emp = Empresa::where('idEmpresa','=',$solicitud->idEmpresa)->first();
         $preguntas = preguntasAlumno::all();

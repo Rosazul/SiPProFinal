@@ -17,14 +17,10 @@ class AutorizacionesReportes extends Migration
             $table->increments('idAutorizacionReportes');
             $table->integer('idRegistroPracticas');
             $table->integer('idReporte');
-            $table->integer('rpeTutorAcademico');
             $table->integer('rpeEncargado')->nullable();
             $table->date('fechaAutorizacionEncargado')->nullable();
-            $table->date('fechaAutorizacionTutorAcademico')->nullable();
             $table->string('comentariosEncargado')->nullable();
-            $table->string('comentariosTutorAcademico')->nullable();
             $table->boolean('statusEncargado')->nullable();
-            $table->boolean('statusTutorAcademico')->nullable();
             $table->timestamps();
         });  
       }

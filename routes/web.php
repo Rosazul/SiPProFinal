@@ -77,14 +77,14 @@ Route::get('/reportesAlumno/{rpe}/{clave}/{idReporte}', 'ReportesController@Repo
 Route::post('/GuardaDatosReportes/{clave}', 'ReportesController@GuardaDatosReportes');
 
 /********************REPORTES TUTOR ACADÉMICO************************************/
-Route::get('/tutorAcademicoReportesPendientes/{rpe}', 'TutorAcademicoReportesPendientesController@TutorAcademicoReportesPendientes');
+//Route::get('/tutorAcademicoReportesPendientes/{rpe}', 'TutorAcademicoReportesPendientesController@TutorAcademicoReportesPendientes');
  
-Route::post('/GuardaAcreditacionReportesTutor/{rpe}/{idReporte}', 'AutorizacionesReportesController@GuardaAcreditacionReportesTutor');
+//Route::post('/GuardaAcreditacionReportesTutor/{rpe}/{idReporte}', 'AutorizacionesReportesController@GuardaAcreditacionReportesTutor');
 
 Route::get('/Elimina/{idReporte}', 'AutorizacionReportesController@Elimina');
 
 /**********************+Autorizaciones TUTOR ACADEMICO************************/
-Route::get('/autorizaReportesTutorAcademico/{rpe}/{clave}', 'AutorizacionesReportesController@AutorizacionesReportes');
+//Route::get('/autorizaReportesTutorAcademico/{rpe}/{clave}', 'AutorizacionesReportesController@AutorizacionesReportes');
 /********************REPORTES ENCARGADO************************************/
 Route::get('/encargadoReportesPendientes/{rpe}', 'EncargadoReportesPendientesController@EncargadoReportesPendientes');
 
